@@ -1,10 +1,10 @@
 ﻿<repository
 name="BNSRepository"
-id="7a760d6e-b470-4aa7-9370-44689777ebf4"
-rxversion="5.4.6.0">
+id="49be5356-df25-45df-9aa6-6658485388ac"
+rxversion="5.4.5.19886">
 	<codegen
 	classname="BNSRepository"
-	namespace="BNS"/>
+	namespace="Pre_release"/>
 	<rootfolder
 	name="Root"
 	id="b953609f-a264-4a25-ab73-e44421da5a1d"
@@ -37,7 +37,7 @@ rxversion="5.4.6.0">
 			capname="inputtag"
 			addcaps="unknown,webelement,inputtag"
 			refimgid="ad4184c6-3eca-4740-b41f-08879191e242">
-				/dom[@domain=$varUrl]//input[@data-bind='value: userName']
+				/dom[@domain=$varUrl]//input[@id='UserName']
 			</item>
 			<item
 			name="Password"
@@ -58,51 +58,6 @@ rxversion="5.4.6.0">
 			ensurevisible="False"
 			refimgid="2b802aaf-96d3-421b-ae73-92f8f2ee5eb3">
 				/dom[@domain=$varUrl]//input[@id='SubmitButton']
-			</item>
-			<item
-			name="Close1"
-			id="357e689b-d946-4759-a938-ca0d742c2e6e"
-			searchtimeout="30000ms"
-			capname="spantag"
-			addcaps="unknown,webelement,spantag"
-			refimgid="2825c1f9-688c-4917-88d2-1710b173d394">
-				/dom[@domain=$varUrl]//body[#'main']//a/span[@innertext='Close']
-			</item>
-			<item
-			name="ATagZurueckZumLogin"
-			id="e67734ab-897d-4ccc-b251-b1b24a2931a7"
-			searchtimeout="30000ms"
-			capname="atag"
-			addcaps="unknown,webelement,atag"
-			refimgid="47b07321-b7f7-4e8d-b73c-fc4d68baeb78">
-				/dom[@domain=$varUrl]//table[#'LoginContainer']//div[2]/a
-			</item>
-			<item
-			name="QuicksearchQS"
-			id="f002a4f0-3156-4d0b-9036-9bb071ba5e42"
-			searchtimeout="30000ms"
-			capname="inputtag"
-			addcaps="unknown,webelement,inputtag"
-			refimgid="3561126e-bbc1-4262-9b51-5d4f3b8c703a">
-				/dom[@domain=$varUrl]//input[#'quicksearch']
-			</item>
-			<item
-			name="JavascriptVoid01"
-			id="6f58325f-f22a-4cec-afef-abfa29a4d4b9"
-			searchtimeout="30000ms"
-			capname="atag"
-			addcaps="unknown,webelement,atag"
-			refimgid="62b21fba-44c6-463d-8b77-7b4854afea4d">
-				/dom[@domain=$varUrl]//div[#'MainAreaTabStrip-2']/div/div[1]/div[2]/span[3]//a[@href='javascript:void(0)']
-			</item>
-			<item
-			name="Addresstable_row1"
-			id="37f90694-eb14-4804-9bc7-b7aa89ea599c"
-			searchtimeout="30000ms"
-			capname="tdtag"
-			addcaps="unknown,webelement,tdtag"
-			refimgid="47a286d8-58cd-4b37-bccb-f608606e2daa">
-				/dom[@domain=$varUrl]//body[#'main']/div[13]/div[2]/div/div[2]/div[1]/div[4]/div[1]/table/tbody/tr[1]/td[1]
 			</item>
 			<item
 			name="FullScreen"
@@ -582,7 +537,7 @@ rxversion="5.4.6.0">
 			capname="spantag"
 			addcaps="unknown,webelement,spantag"
 			refimgid="312e8048-a842-4d44-85ed-18f4eb431831">
-				/dom[@domain=$varUrl]//body[#'main']//a/span[@innertext='Close']
+				/dom[@domain=$varUrl]//body[#'main']//?/span[@innertext='Close']
 			</item>
 			<item
 			name="HelpAbout"
@@ -624,10 +579,10 @@ rxversion="5.4.6.0">
 			name="TxtQuickSearch"
 			id="47ab9336-dd53-4732-99d3-1f40aae94b5d"
 			searchtimeout="30000ms"
-			capname="inputtag"
+			capname="divtag"
 			addcaps="unknown,webelement,inputtag"
 			refimgid="ed53f970-abf4-4fd1-b1e6-37e10324fec7">
-				/dom[@domain=$varUrl]//div[#'MainArea']//div[@id='MainAreaTabStrip-1']//div[@class='quicksearch']//input[@id='txt-quick-search']
+				/dom[@domain=$varUrl]//div[#'MainArea']//div[@id='MainAreaTabStrip-1']//div[@class='quicksearch']
 			</item>
 			<item
 			name="BNSGmbH1"
@@ -637,6 +592,15 @@ rxversion="5.4.6.0">
 			addcaps="unknown,webelement,tdtag"
 			refimgid="45d8a854-934b-43ed-ba4b-32ce354bae07">
 				/dom[@domain=$varUrl]//div[#'MainAreaTabStrip-1']//table/tbody/tr/td[text()='BNS GmbH']/preceding-sibling::td[text()='1']
+			</item>
+			<item
+			name="InputTagUrl"
+			id="5dcca121-1612-4cd3-9c34-65f209f938f2"
+			searchtimeout="30000ms"
+			capname="inputtag"
+			addcaps="unknown,webelement,inputtag"
+			refimgid="2a58b9b3-b231-478c-95e2-6844b7705705">
+				/dom[@domain=$varUrl]//input[@id='Url']
 			</item>
 			<item
 			name="DivTagClientBNS11"
@@ -689,22 +653,13 @@ rxversion="5.4.6.0">
 				/dom[@domain=$varUrl]//input[#'Street']
 			</item>
 			<item
-			name="CloseTab"
+			name="HttpOnwebBnsSoftwareComContentIm"
 			id="b4ecba60-8407-414f-b202-8be146b93084"
 			searchtimeout="5000ms"
 			capname="imgtag"
 			addcaps="unknown,webelement,imgtag"
 			refimgid="786d02a4-f661-4d27-b41a-035ba5c86091">
-				/dom[@domain=$varUrl]//div[#'MainAreaTabStrip']//span/img[@class='closeTab']
-			</item>
-			<item
-			name="CloseActiveTAb"
-			id="74bb601d-a5e0-4ae2-8e02-d60cc789048c"
-			searchtimeout="5000ms"
-			capname="imgtag"
-			addcaps="unknown,webelement,imgtag"
-			refimgid="40232e52-e2e1-4337-86d0-b400a0353ad2">
-				/dom[@domain=$varUrl]//li[#'MainAreaTabStrip_ts_active']//img[@class='closeTab']
+				/dom[@domain=$varUrl]//li[#'MainAreaTabStrip']//img[@class='closeTab']
 			</item>
 			<item
 			name="KlaeserInternationaleFachspedition"
@@ -728,7 +683,7 @@ rxversion="5.4.6.0">
 			searchtimeout="5000ms"
 			capname="spantag"
 			addcaps="unknown,webelement,spantag">
-				/dom[@domain=$varUrl]//th[#'d8a4810a-77cb-45ea-b541-c2c3cea6fa0c']/a[@innertext='Adressnr' and @href~'^http://onweb\.bns-software']/span[pos()=0]
+				/dom[@domain=$varUrl]//th[#'d8a4810a-77cb-45ea-b541-c2c3cea6fa0c']/a[@innertext='Adressnr']/span[pos()=0]
 			</item>
 			<item
 			name="Adressnr"
@@ -736,7 +691,7 @@ rxversion="5.4.6.0">
 			searchtimeout="5000ms"
 			capname="atag"
 			addcaps="unknown,webelement,atag">
-				/dom[@domain=$varUrl]//th[#'aria_active_cell']/a[@innertext='Adressnr' and @href~'^http://onweb\.bns-software']
+				/dom[@domain=$varUrl]//th[#'aria_active_cell']/a[@innertext='Adressnr']
 			</item>
 			<item
 			name="Rewe_Group_Zentrale"
@@ -770,7 +725,7 @@ rxversion="5.4.6.0">
 			searchtimeout="5000ms"
 			capname="spantag"
 			addcaps="unknown,webelement,spantag">
-				/dom[@domain=$varUrl]//div[#'MainAreaTabStrip-1']/div[pos()=0]/div[pos()=0]/div[pos()=1]/span[pos()=1]/a[@href~'^http://onweb\.bns-software']/span[pos()=1]
+				/dom[@domain=$varUrl]//div[#'MainAreaTabStrip-1']/div[pos()=0]/div[pos()=0]/div[pos()=1]/span[pos()=1]/a/span[pos()=1]
 			</item>
 			<item
 			name="Adressdaten"
@@ -874,7 +829,7 @@ rxversion="5.4.6.0">
 			searchtimeout="5000ms"
 			capname="litag"
 			addcaps="unknown,webelement,litag"
-			refimgid="d454ab08-4196-432e-90de-9b91f2c22add">
+			refimgid="6c63b13f-ea46-4e69-bc52-43c9337e97c0">
 				/dom[@domain=$varUrl]//li[@innertext='ADMIN, BNS (1)']
 			</item>
 			<item
@@ -923,16 +878,7 @@ rxversion="5.4.6.0">
 				searchtimeout="5000ms"
 				capname="tdtag"
 				addcaps="unknown,webelement,tdtag">
-					/dom[@domain=$varUrl]//body[#'main']/div[pos()=12]/div[pos()=1]/div[pos()=0]/div[pos()=1]/div[pos()=0]/div[pos()=4]/div[pos()=0]/table[pos()=0]/tbody[pos()=1]/tr[pos()=0]/td[@innertext='M&#252;nchen']
-				</item>
-				<item
-				name="MuenchenQS"
-				id="96de9bb4-01b6-4588-a6a1-36298296b2d5"
-				searchtimeout="30000ms"
-				capname="tdtag"
-				addcaps="unknown,webelement,tdtag"
-				refimgid="982d2f80-3aa4-416a-8f6c-d1179043e0cf">
-					/dom[@domain=$varUrl]//body[#'main']/div[pos()=12]/div[pos()=1]/div[pos()=0]//body[#'main']/div[13]/div[2]/div/div[2]/div[1]/div[4]/?/?/table/tbody/tr[2]/td[@innertext='M&#252;nchen']
+					/dom[@domain=$varUrl]//body[#'main']/div[pos()=12]/div[pos()=1]/div[pos()=0]/div[pos()=1]/div[pos()=0]/div[pos()=4]/div[pos()=0]/table[pos()=0]/tbody[pos()=1]/tr[pos()=0]/td[1]
 				</item>
 				<item
 				name="Textschrd"
@@ -956,7 +902,26 @@ rxversion="5.4.6.0">
 				searchtimeout="5000ms"
 				capname="spantag"
 				addcaps="unknown,webelement,spantag">
-					/dom[@domain=$varUrl]//body[#'main']/div[pos()=12]/div[pos()=1]/div[pos()=0]/div[pos()=0]/div[pos()=1]/span[pos()=1]/a[@href='http://onweb.bns-software.com/#']/span[pos()=0]
+					/dom[@domain=$varUrl]//body[#'main']/div[pos()=12]/div[pos()=1]/div[pos()=0]/div[pos()=0]/div[pos()=1]/span[pos()=1]/a/span[pos()=0]
+				</item>
+				<item
+				name="TdTagDE"
+				id="cc7dbe44-fccb-4ad3-9d75-07e5c9fbec08"
+				searchtimeout="5000ms"
+				capname="trtag"
+				addcaps="unknown,webelement,tdtag"
+				refimgid="d4cd25b4-50bf-4ed6-bbbd-1364f5e0b608">
+					/dom[@domain=$varUrl]//body[#'main']/div[pos()=12]/div[pos()=1]/div[pos()=0]/div[pos()=1]/div[pos()=0]/div[pos()=4]/div[pos()=0]/table[pos()=0]/tbody[pos()=1]/tr[pos()=1]
+				</item>
+				<item
+				name="Driesch"
+				id="91b6c469-6f6f-43b8-9f78-997e367523d5"
+				searchtimeout="5000ms"
+				capname="tdtag"
+				refpath="/dom[@domain='prerelease.bns.local']//body[#'main']/div[11]/div[2]/div/div[2]/div[1]/div[4]/div[1]/table/tbody/tr[2]/td[@innertext='Driesch']"
+				addcaps="unknown,webelement,tdtag"
+				refimgid="9489c4ba-e647-4217-b1c6-f98771a73889">
+					/dom[@domain=$varUrl]//body[#'main']/div[pos()=12]/div[pos()=1]/div[pos()=0]/div[pos()=1]/div[pos()=0]/div[pos()=4]/div[pos()=0]/table[pos()=0]/tbody[pos()=1]/tr[pos()=1]/td[@innertext='Driesch']
 				</item>
 				<basepath>
 					/dom[@domain=$varUrl]//body[#'main']/div[pos()=12]/div[pos()=1]/div[pos()=0]
@@ -1041,7 +1006,7 @@ rxversion="5.4.6.0">
 				searchtimeout="5000ms"
 				capname="spantag"
 				addcaps="unknown,webelement,spantag">
-					/dom[@domain=$varUrl]//fieldset[#'03d261b4-b9bc-437e-adf3-fb3310220066']/div[pos()=1]/table[pos()=0]/tbody[pos()=0]/tr[pos()=6]/td[pos()=0]/table[pos()=0]/tbody[pos()=0]/tr[pos()=0]/td[pos()=1]/table[pos()=0]/tbody[pos()=0]/tr[pos()=0]/td[pos()=1]/a[@href='http://onweb.bns-software.com/#']/span[pos()=0]
+					/dom[@domain=$varUrl]//fieldset[#'03d261b4-b9bc-437e-adf3-fb3310220066']/div[pos()=1]/table[pos()=0]/tbody[pos()=0]/tr[pos()=6]/td[pos()=0]/table[pos()=0]/tbody[pos()=0]/tr[pos()=0]/td[pos()=1]/table[pos()=0]/tbody[pos()=0]/tr[pos()=0]/td[pos()=1]/a/span[pos()=0]
 				</item>
 				<item
 				name="BusinessrelationInput"
@@ -1077,7 +1042,7 @@ rxversion="5.4.6.0">
 			searchtimeout="5000ms"
 			capname="atag"
 			addcaps="unknown,webelement,atag">
-				/dom[@domain=$varUrl]//div[#'72aa0f1a-db0c-4789-82d8-b138d77955a1']/table[pos()=1]/tbody[pos()=1]/tr[pos()=0]/td[pos()=4]/a[@innertext='1' and @title='Freitag, 1. Januar 2016' and @href='http://onweb.bns-software.com/#']
+				/dom[@domain=$varUrl]//div[#'72aa0f1a-db0c-4789-82d8-b138d77955a1']/table[pos()=1]/tbody[pos()=1]/tr[pos()=0]/td[pos()=4]/a[@innertext='1' and @title='Freitag, 1. Januar 2016']
 			</item>
 			<item
 			name="OptionTag7Druckerei"
@@ -1149,7 +1114,7 @@ rxversion="5.4.6.0">
 			searchtimeout="5000ms"
 			capname="inputtag"
 			addcaps="unknown,webelement,inputtag"
-			refimgid="79af8151-886f-4588-ba9a-3fa5602feb7e">
+			refimgid="66b80d6f-63a5-47a7-a627-f02480954919">
 				/dom[@domain=$varUrl]//input[#'Name']
 			</item>
 			<item
@@ -1378,7 +1343,7 @@ rxversion="5.4.6.0">
 				searchtimeout="5000ms"
 				capname="atag"
 				addcaps="unknown,webelement,atag">
-					/dom[@domain=$varUrl]//th[#'d3a6a25b-a395-467c-baa1-b1475ee5cf9a']/a[@innertext='Telefax' and @href='http://onweb.bns-software.com/#']
+					/dom[@domain=$varUrl]//th[#'d3a6a25b-a395-467c-baa1-b1475ee5cf9a']/a[@innertext='Telefax']
 				</item>
 				<item
 				name="D3a6a25bA395467cBaa1B1475ee5cf9a"
@@ -1408,9 +1373,9 @@ rxversion="5.4.6.0">
 				name="TdTagDE"
 				id="23c2ff4b-e44d-438c-9101-56332da778ac"
 				searchtimeout="5000ms"
-				capname="tdtag"
+				capname="trtag"
 				addcaps="unknown,webelement,tdtag">
-					/dom[@domain=$varUrl]//div[@class='LookUpDialogGrid']//table[@role='treegrid']/tbody/tr[pos()=1]/td[pos()=1]
+					/dom[@domain=$varUrl]//body[#'main']/div[pos()=12]/div[pos()=1]/div[pos()=0]/div[pos()=1]/div[pos()=0]/div[pos()=4]/div[pos()=0]/table[pos()=0]/tbody[pos()=1]/tr[pos()=1]
 				</item>
 				<item
 				name="UEBERNEHMEN"
@@ -1434,7 +1399,7 @@ rxversion="5.4.6.0">
 				searchtimeout="5000ms"
 				capname="spantag"
 				addcaps="unknown,webelement,spantag">
-					/dom[@domain=$varUrl]//fieldset[#'bd2406c1-c3ec-42b9-ab7a-ca21120aeeb2']/div[pos()=1]/table[pos()=0]/tbody[pos()=0]/tr[pos()=2]/td[pos()=0]/table[pos()=0]/tbody[pos()=0]/tr[pos()=0]/td[pos()=1]/div[@title='']/span[pos()=0]/span[pos()=0]/span[pos()=1]/span[@innertext='select']
+					/dom[@domain=$varUrl]//?/div[pos()=1]/table[pos()=0]/tbody[pos()=0]/tr[pos()=2]/td[pos()=0]/table[pos()=0]/tbody[pos()=0]/tr[pos()=0]/td[pos()=1]/div[@title='']/span[pos()=0]/span[pos()=0]/span[pos()=1]/span[1]
 				</item>
 				<item
 				name="ContactInput"
@@ -1668,7 +1633,7 @@ rxversion="5.4.6.0">
 				searchtimeout="5000ms"
 				capname="litag"
 				addcaps="unknown,webelement,litag">
-					/dom[@domain=$varUrl]//body[#'main']/div[pos()=1]/div[pos()=0]/div[pos()=1]/ul[pos()=0]/li[@innertext='Herr']
+					/dom[@domain=$varUrl]//body[#'main']/div[pos()=3]/div[pos()=0]/div[pos()=1]/ul[pos()=0]/li[@innertext='Herr']
 				</item>
 				<item
 				name="TitleInput1"
@@ -1684,7 +1649,7 @@ rxversion="5.4.6.0">
 				searchtimeout="5000ms"
 				capname="litag"
 				addcaps="unknown,webelement,litag">
-					/dom[@domain=$varUrl]//body[#'main']/div[pos()=2]/div[pos()=0]/div[pos()=1]/ul[pos()=0]/li[@innertext='Prof.']
+					/dom[@domain=$varUrl]//body[#'main']/div[pos()=4]/div[pos()=0]/div[pos()=1]/ul[pos()=0]/li[@innertext='Prof.']
 				</item>
 				<item
 				name="PositionInput1"
@@ -1700,7 +1665,7 @@ rxversion="5.4.6.0">
 				searchtimeout="5000ms"
 				capname="litag"
 				addcaps="unknown,webelement,litag">
-					/dom[@domain=$varUrl]//body[#'main']/div[pos()=3]/div[pos()=0]/div[pos()=1]/ul[pos()=0]/li[@innertext='Buchhaltung']
+					/dom[@domain=$varUrl]//body[#'main']/?/div[pos()=0]/div[pos()=1]/ul[pos()=0]/li[@innertext='Buchhaltung']
 				</item>
 				<item
 				name="JavascriptVoid01"
@@ -1733,7 +1698,7 @@ rxversion="5.4.6.0">
 				searchtimeout="5000ms"
 				capname="inputtag"
 				addcaps="unknown,webelement,inputtag"
-				refimgid="80fcb625-910c-4905-a824-29c8ba1e513b">
+				refimgid="7c1eee93-1b6e-40a8-b358-b87d4b3c3a58">
 					/dom[@domain=$varUrl]//input[@name='Assistent_input']
 				</item>
 				<item
@@ -1743,6 +1708,14 @@ rxversion="5.4.6.0">
 				capname="litag"
 				addcaps="unknown,webelement,litag">
 					/dom[@domain=$varUrl]//body[#'main']/div[pos()=5]/div[pos()=0]/div[pos()=1]/ul[pos()=0]/li[@innertext='Becker, Boris']
+				</item>
+				<item
+				name="FEntry"
+				id="b4d3ed93-dfe6-4a85-87e0-3fbb2e2c0ec2"
+				searchtimeout="5000ms"
+				capname="litag"
+				addcaps="unknown,webelement,litag">
+					/dom[@domain=$varUrl]//ul[@data-role='staticlist']/li[1]
 				</item>
 				<item
 				name="Aktivitaeten"
@@ -1778,11 +1751,12 @@ rxversion="5.4.6.0">
 					/dom[@domain=$varUrl]//body[#'main']/div[pos()=13]/div[pos()=1]/div[pos()=0]/div[pos()=1]/div[pos()=0]/div[pos()=4]/div[pos()=0]/table[pos()=0]/tbody[pos()=1]/tr[pos()=1]/td[@innertext='DE']
 				</item>
 				<item
-				name="UEBERNEHMEN2"
+				name="UEBERNEHMENPreR"
 				id="a8ed7e0d-b164-4702-a8d7-582acbb56a53"
 				searchtimeout="5000ms"
 				capname="buttontag"
-				addcaps="unknown,webelement,buttontag">
+				addcaps="unknown,webelement,buttontag"
+				refimgid="ca0a1791-5d3a-4d8a-95d0-b2fcebaf8dde">
 					/dom[@domain=$varUrl]//button[@innertext='&#220;BERNEHMEN']
 				</item>
 				<item
@@ -1791,7 +1765,7 @@ rxversion="5.4.6.0">
 				searchtimeout="5000ms"
 				capname="litag"
 				addcaps="unknown,webelement,litag">
-					/dom[@domain=$varUrl]//body[#'main']/div[pos()=1]/div[pos()=0]/div[pos()=1]/ul[pos()=0]/li[@innertext='Vertriebsprojekt Wacker 1']
+					/dom[@domain=$varUrl]//body[#'main']/div[pos()=1]/div[pos()=0]/div[pos()=1]/ul[pos()=0]/li[@value='&#8202;&#8202;VertriebsproektWacker1']
 				</item>
 				<item
 				name="TdTagDE2"
@@ -1862,8 +1836,7 @@ rxversion="5.4.6.0">
 				id="d290e362-2cae-4dba-a168-71c006c72449"
 				searchtimeout="5000ms"
 				capname="textareatag"
-				addcaps="unknown,webelement,textareatag"
-				refimgid="b8774eb8-9c48-4d9c-83d8-1342d43669da">
+				addcaps="unknown,webelement,textareatag">
 					/dom[@domain=$varUrl]//textarea[#'Text']
 				</item>
 				<item
@@ -1954,7 +1927,7 @@ rxversion="5.4.6.0">
 				searchtimeout="5000ms"
 				capname="atag"
 				addcaps="unknown,webelement,spantag"
-				refimgid="2e24b645-5495-4e7e-943a-a3324e171d0d">
+				refimgid="2554dfed-ba11-4666-9325-8595c725deee">
 					/dom[@domain=$varUrl]//a[@class='k-button k-link tooltip create']
 				</item>
 				<item
@@ -2142,7 +2115,7 @@ rxversion="5.4.6.0">
 				searchtimeout="5000ms"
 				capname="inputtag"
 				addcaps="unknown,webelement,inputtag">
-					/dom[@domain=$varUrl]//div/table/tbody/tr[4]/td/table/tbody/tr/td[2]/div/span/span/input[1]
+					/dom[@domain=$varUrl]//td[@data-label='Gesamtwert']//input[@title='' and @type='text' and @value='0,00']
 				</item>
 				<item
 				name="Text4"
@@ -2150,7 +2123,7 @@ rxversion="5.4.6.0">
 				searchtimeout="5000ms"
 				capname="inputtag"
 				addcaps="unknown,webelement,inputtag">
-					/dom[@domain=$varUrl]//td[@data-label='Angebotener Wert']//input[1]
+					/dom[@domain=$varUrl]//td[@data-label='Angebotener Wert']//input[@type='text' and @value='0,00']
 				</item>
 				<item
 				name="Text5"
@@ -2158,7 +2131,7 @@ rxversion="5.4.6.0">
 				searchtimeout="5000ms"
 				capname="inputtag"
 				addcaps="unknown,webelement,inputtag">
-					/dom[@domain=$varUrl]//td[@data-label='Realisierter Preis']//input[1]
+					/dom[@domain=$varUrl]//td[@data-label='Realisierter Preis']//input[@type='text' and @value='0,00']
 				</item>
 				<item
 				name="SalesprojectstatusInput"
@@ -2287,7 +2260,7 @@ rxversion="5.4.6.0">
 				searchtimeout="5000ms"
 				capname="atag"
 				addcaps="unknown,webelement,atag">
-					/dom[@domain=$varUrl]//ul[#'panelbar']/li[pos()=6]/a[@innertext='ONARCHIVE' and @href~'^http://onweb\.bns-software']
+					/dom[@domain=$varUrl]//ul[#'panelbar']/li[pos()=6]/a[@innertext='ONARCHIVE']
 				</item>
 				<item
 				name="ONARCHIVE1"
@@ -2295,7 +2268,7 @@ rxversion="5.4.6.0">
 				searchtimeout="5000ms"
 				capname="atag"
 				addcaps="unknown,webelement,atag">
-					/dom[@domain=$varUrl]//div[#'panelbar-7']/div[pos()=0]/ul[pos()=0]/li[pos()=0]/div[pos()=0]/a[@innertext='ONARCHIVE' and @href~'^http://onweb\.bns-software']
+					/dom[@domain=$varUrl]//div[#'panelbar-7']/div[pos()=0]/ul[pos()=0]/li[pos()=0]/div[pos()=0]/a[@innertext='ONARCHIVE']
 				</item>
 				<item
 				name="OnArchive2"
@@ -2335,7 +2308,7 @@ rxversion="5.4.6.0">
 				searchtimeout="5000ms"
 				capname="spantag"
 				addcaps="unknown,webelement,spantag">
-					/dom[@domain=$varUrl]//div[#'left-pane']/div[pos()=0]/div[pos()=0]/ul[pos()=0]/li[pos()=1]/ul[pos()=1]/li[pos()=9]/div[pos()=0]/span[@innertext='Gutschriften']
+					/dom[@domain=$varUrl]//div[#'left-pane']/div[pos()=0]/div[pos()=0]/ul[pos()=0]/li[pos()=1]/ul[pos()=1]/li[pos()=8]/div[pos()=0]/span[@innertext='Gutschriften']
 				</item>
 				<item
 				name="Gutschriften1"
@@ -2351,7 +2324,7 @@ rxversion="5.4.6.0">
 				searchtimeout="5000ms"
 				capname="atag"
 				addcaps="unknown,webelement,atag">
-					/dom[@domain=$varUrl]//ul[#'panelbar']/li[pos()=7]/a[@innertext='ONBI' and @href~'^http://onweb\.bns-software']
+					/dom[@domain=$varUrl]//ul[#'panelbar']/li[pos()=7]/a[@innertext='ONBI']
 				</item>
 				<item
 				name="DASHBOARDS"
@@ -2359,7 +2332,7 @@ rxversion="5.4.6.0">
 				searchtimeout="5000ms"
 				capname="atag"
 				addcaps="unknown,webelement,atag">
-					/dom[@domain=$varUrl]//div[#'panelbar-8']/div[pos()=0]/ul[pos()=0]/li[pos()=0]/div[pos()=0]/a[@innertext='DASHBOARDS' and @href~'^http://onweb\.bns-software']
+					/dom[@domain=$varUrl]//div[#'panelbar-8']/div[pos()=0]/ul[pos()=0]/li[pos()=0]/div[pos()=0]/a[@innertext='DASHBOARDS']
 				</item>
 				<item
 				name="Chef"
@@ -2383,7 +2356,7 @@ rxversion="5.4.6.0">
 				searchtimeout="5000ms"
 				capname="atag"
 				addcaps="unknown,webelement,atag">
-					/dom[@domain=$varUrl]//div[#'panelbar-1']/div[pos()=0]/ul[pos()=0]/li[pos()=5]/div[pos()=0]/a[@innertext='KONFIGURATION' and @href~'^http://onweb\.bns-software']
+					/dom[@domain=$varUrl]//div[#'panelbar-1']/div[pos()=0]/ul[pos()=0]/li[pos()=5]/div[pos()=0]/a[@innertext='KONFIGURATION']
 				</item>
 				<item
 				name="Adressen"
@@ -2391,7 +2364,7 @@ rxversion="5.4.6.0">
 				searchtimeout="5000ms"
 				capname="atag"
 				addcaps="unknown,webelement,atag">
-					/dom[@domain=$varUrl]//div[#'panelbar-1']/div[pos()=0]/ul[pos()=0]/li[pos()=5]/ul[pos()=1]/li[pos()=0]/div[pos()=0]/a[@innertext='Adressen' and @href='javascript:void(0);']
+					/dom[@domain=$varUrl]//div[#'panelbar-1']/div[pos()=0]/ul[pos()=0]/li[pos()=5]/ul[pos()=1]/li[pos()=0]/div[pos()=0]/a[@innertext='Adressen']
 				</item>
 				<item
 				name="Select1"
@@ -2399,7 +2372,7 @@ rxversion="5.4.6.0">
 				searchtimeout="5000ms"
 				capname="spantag"
 				addcaps="unknown,webelement,spantag">
-					/dom[@domain=$varUrl]//div[#'MainAreaTabStrip-2']/div//span[@innertext='select']
+					/dom[@domain=$varUrl]//div[#'MainAreaTabStrip-1']/div[pos()=0]/div[pos()=0]/div[pos()=0]/span[pos()=0]/div[pos()=0]/span[@title='']/span[pos()=0]/span[pos()=1]/span[@innertext='select']
 				</item>
 				<item
 				name="Geschaeftsbeziehungen"
@@ -2415,7 +2388,7 @@ rxversion="5.4.6.0">
 				searchtimeout="5000ms"
 				capname="tdtag"
 				addcaps="unknown,webelement,tdtag">
-					/dom[@domain=$varUrl]//div[#'MainAreaTabStrip-2']/div//table/tbody//td[@innertext='Kunde']
+					/dom[@domain=$varUrl]//div[#'MainAreaTabStrip-1']/div[pos()=0]/div[pos()=1]/div[pos()=0]/div[pos()=0]/div[pos()=4]/div[pos()=0]/table[pos()=0]/tbody[pos()=1]/tr[pos()=2]/td[@innertext='Kunde']
 				</item>
 				<item
 				name="MasterDataEditFormBNSM0509CoreServic"
@@ -2617,7 +2590,7 @@ rxversion="5.4.6.0">
 				capname="divtag"
 				addcaps="unknown,webelement,divtag"
 				refimgid="7e22a37a-9c09-4565-bd30-7c8dd8575b5d">
-					/dom[@domain=$varUrl]//body[#'main']//div[@innertext~'^\.\.\.\ zeige\ alle\ Alarmmeldu']
+					/dom[@domain=$varUrl]//body[#'main']/div[pos()=1]/div[pos()=2]/table[pos()=0]/tbody[pos()=0]/tr[pos()=0]/td[pos()=0]/div[pos()=0]/div[@title='']/div[@innertext~'^\.\.\.\ zeige\ alle\ Alarmmeldu']
 				</item>
 				<item
 				name="LinkNachrichtenartRecvAlertWorkflow"
@@ -2688,17 +2661,26 @@ rxversion="5.4.6.0">
 				searchtimeout="5000ms"
 				capname="litag"
 				addcaps="unknown,webelement,litag"
-				refimgid="4eddc68f-6c3c-4a78-8583-8c4b8e1c82c0">
+				refimgid="ed957c97-b744-429b-9575-1b10f3a94259">
 					/dom[@domain=$varUrl]//div[2]/div/div[2]/ul/li[3]
+				</item>
+				<item
+				name="Mandant"
+				id="a9d253aa-7162-4cb5-b6c4-82f5900dfb13"
+				searchtimeout="5000ms"
+				capname="litag"
+				addcaps="unknown,webelement,litag"
+				refimgid="ed957c97-b744-429b-9575-1b10f3a94259">
+					/dom[@domain=$varUrl]//div/li[@value='&#8202;&#8202;&#8202;BNS GmbH Entwicklungsmandant']
 				</item>
 				<item
 				name="Frachtzahler"
 				id="825728a9-9c2c-4b42-80cc-b90d03ba6a7e"
 				searchtimeout="5000ms"
-				capname="litag"
+				capname="inputtag"
 				addcaps="unknown,webelement,litag"
 				refimgid="5659f990-28a5-4b4a-8046-a029736a1da9">
-					/dom[@domain=$varUrl]//body[#'main']/div[pos()=2]/div[pos()=0]/div[pos()=1]/ul[pos()=0]/li[@innertext='Frachtzahler']
+					/dom[@domain=$varUrl]//?/div[pos()=1]/table[pos()=0]/tbody[pos()=0]/tr[pos()=4]/td[pos()=0]/table[pos()=0]/tbody[pos()=0]/tr[pos()=0]/td[pos()=1]/?/?/?/input[@name='Frachtzahler2_input' and @type='text']
 				</item>
 				<item
 				name="KIconKICustom"
@@ -2706,7 +2688,7 @@ rxversion="5.4.6.0">
 				searchtimeout="5000ms"
 				capname="spantag"
 				addcaps="unknown,webelement,spantag"
-				refimgid="6e7bda13-c568-47bc-b587-b6ac7c7797fa">
+				refimgid="abd9f531-6cba-4954-b05c-02d7b591f414">
 					/dom[@domain=$varUrl]//div[#'MainAreaTabStrip-1']//div[@class='toolbar-right']//a/span[@class='k-icon k-add']
 				</item>
 				<item
@@ -2827,13 +2809,13 @@ rxversion="5.4.6.0">
 					/dom[@domain=$varUrl]//div/table/tbody/tr[8]/td[2]/table/tbody/tr/td[2]/div/span/span/input
 				</item>
 				<item
-				name="Kategorie"
+				name="CashOnDeliveryTypeFullInput1"
 				id="5a95e3be-e4d3-4263-8c31-200ad27bca94"
 				searchtimeout="5000ms"
-				capname="spantag"
+				capname="inputtag"
 				addcaps="unknown,webelement,inputtag"
 				refimgid="49ddacec-2292-4dc1-8b73-f8c0a01638ed">
-					/dom[@domain=$varUrl]//?/div[pos()=1]/table[pos()=0]/tbody[pos()=0]/tr[pos()=7]/td[pos()=1]/table[pos()=0]/tbody[pos()=0]/tr[pos()=0]/td[pos()=1]/div[pos()=0]/span[pos()=0]/span[pos()=0]/span[pos()=1]/span[@innertext='select']
+					/dom[@domain=$varUrl]//div[pos()=1]/table[pos()=0]/tbody[pos()=0]/tr[pos()=6]/td[pos()=0]/table[pos()=0]/tbody[pos()=0]/tr[pos()=0]/td[pos()=1]/div[pos()=0]/span[pos()=0]/span[pos()=0]/input[@title='' and @name='Dlleistungsdatum' and @type='text']
 				</item>
 				<item
 				name="Text11"
@@ -2842,7 +2824,7 @@ rxversion="5.4.6.0">
 				capname="inputtag"
 				addcaps="unknown,webelement,inputtag"
 				refimgid="e6ab38a7-2dfe-4b80-aeb7-e3790c52910c">
-					/dom[@domain=$varUrl]//?/table[pos()=0]/tbody[pos()=0]/tr[pos()=1]/td[pos()=0]/table[pos()=0]/tbody[pos()=0]/tr[pos()=0]/td[pos()=1]/div[pos()=0]/div[pos()=0]/div[pos()=2]/div[pos()=0]/span[pos()=1]/span[pos()=0]/span[pos()=0]/input[@type='text' and @value='25']
+					/dom[@domain=$varUrl]//table[pos()=0]/tbody[pos()=0]/tr[pos()=1]/td[pos()=0]/table[pos()=0]/tbody[pos()=0]/tr[pos()=0]/td[pos()=1]/div[pos()=0]/div[pos()=0]/div[pos()=2]/div[pos()=0]/span[pos()=1]/span[pos()=0]/span[pos()=0]/input[@title='' and @type='text' and @value='25']
 				</item>
 				<item
 				name="Referenz"
@@ -2869,7 +2851,7 @@ rxversion="5.4.6.0">
 				capname="atag"
 				addcaps="unknown,webelement,atag"
 				refimgid="6d62e7be-4ae5-4522-8fb9-64b79b0c39ba">
-					/dom[@domain=$varUrl]//ul[#'panelbar']/li[pos()=2]/a[@innertext='ONWEB ADMIN' and @href~'^http://onweb\.bns-software']
+					/dom[@domain=$varUrl]//ul[#'panelbar']/li[pos()=2]/a[@innertext='ONWEB ADMIN']
 				</item>
 				<item
 				name="PORTALKONFIGURATION"
@@ -2878,7 +2860,7 @@ rxversion="5.4.6.0">
 				capname="atag"
 				addcaps="unknown,webelement,atag"
 				refimgid="78e8088d-4909-4982-8c87-f1dfd59f76a0">
-					/dom[@domain=$varUrl]//div[#'panelbar-3']/div[pos()=0]/ul[pos()=0]/li[pos()=1]/div[pos()=0]/a[@innertext='PORTALKONFIGURATION' and @href~'^http://onweb\.bns-software']
+					/dom[@domain=$varUrl]//div[#'panelbar-3']/div[pos()=0]/ul[pos()=0]/li[pos()=1]/div[pos()=0]/a[@innertext='PORTALKONFIGURATION']
 				</item>
 				<item
 				name="Portale"
@@ -2914,7 +2896,7 @@ rxversion="5.4.6.0">
 				capname="atag"
 				addcaps="unknown,webelement,atag"
 				refimgid="22428f66-f65c-4494-a13f-d3919653dc5d">
-					/dom[@domain=$varUrl]//div[#'panelbar-3']/div[pos()=0]/ul[pos()=0]/li[pos()=2]/div[pos()=0]/a[@innertext='PORTALBENUTZER' and @href~'^http://onweb\.bns-software']
+					/dom[@domain=$varUrl]//div[#'panelbar-3']/div[pos()=0]/ul[pos()=0]/li[pos()=2]/div[pos()=0]/a[@innertext='PORTALBENUTZER']
 				</item>
 				<item
 				name="Portalnutzer"
@@ -2929,10 +2911,10 @@ rxversion="5.4.6.0">
 				name="PortalInput"
 				id="3ce94f8c-41cc-408a-bfd0-c893edb884d6"
 				searchtimeout="5000ms"
-				capname="spantag"
+				capname="inputtag"
 				addcaps="unknown,webelement,inputtag"
 				refimgid="79572e0d-9c61-45c1-b6a5-9fb235cb5e38">
-					/dom[@domain=$varUrl]//?/div[pos()=1]/table[pos()=0]/tbody[pos()=0]/tr[pos()=1]/td[pos()=0]/table[pos()=0]/tbody[pos()=0]/tr[pos()=0]/td[@data-label='Portal']/div[pos()=0]/span[pos()=0]/span[pos()=0]/span[pos()=1]/span[@innertext='select']
+					/dom[@domain=$varUrl]//div[pos()=1]/table[pos()=0]/tbody[pos()=0]/tr[pos()=1]/td[pos()=0]/table[pos()=0]/tbody[pos()=0]/tr[pos()=0]/td[pos()=1]/div[@title='']/span[pos()=0]/span[pos()=0]/input[@title='' and @name='Portal_input' and @type='text']
 				</item>
 				<item
 				name="BNSOnFleetPortal0515"
@@ -2940,17 +2922,17 @@ rxversion="5.4.6.0">
 				searchtimeout="5000ms"
 				capname="litag"
 				addcaps="unknown,webelement,litag"
-				refimgid="85acbd56-23fa-46fc-9806-61b8e0a9c135">
+				refimgid="d48f1b45-468c-4e9c-a114-0cda6b5097c6">
 					/dom[@domain=$varUrl]//body[#'main']/div[pos()=3]/div[pos()=0]/div[pos()=1]/ul[pos()=0]/li[@innertext='BNS OnFleet Portal 0515']
 				</item>
 				<item
-				name="BuchungSchluessel"
+				name="CashOnDeliveryTypeFullInput2"
 				id="94046c89-f59a-4c2d-b367-55b4b7261f46"
 				searchtimeout="5000ms"
-				capname="spantag"
+				capname="inputtag"
 				addcaps="unknown,webelement,inputtag"
 				refimgid="be830d8f-ded6-40e4-bb3d-e064b00076e0">
-					/dom[@domain=$varUrl]//?/div[pos()=1]/table[pos()=0]/tbody[pos()=0]/tr[pos()=11]/td[pos()=0]/table[pos()=0]/tbody[pos()=0]/tr[pos()=0]/td[pos()=1]/div[pos()=0]/span[pos()=0]/span[pos()=0]/span[pos()=1]/span[@innertext='select']
+					/dom[@domain=$varUrl]//div[pos()=1]/table[pos()=0]/tbody[pos()=0]/tr[pos()=11]/td[pos()=2]/table[pos()=0]/tbody[pos()=0]/tr[pos()=0]/td[pos()=1]/div[@title='']/span[pos()=0]/span[pos()=0]/input[@title='' and @name='CashOnDeliveryTypeFull_input' and @type='text']
 				</item>
 				<item
 				name="ABRECHNUNG"
@@ -2959,7 +2941,7 @@ rxversion="5.4.6.0">
 				capname="atag"
 				addcaps="unknown,webelement,atag"
 				refimgid="430953c5-d263-4f4a-a369-982d92e87d88">
-					/dom[@domain=$varUrl]//div[#'panelbar-4']/div[pos()=0]/ul[pos()=0]/li[pos()=0]/div[pos()=0]/a[@innertext='ABRECHNUNG' and @href~'^http://onweb\.bns-software']
+					/dom[@domain=$varUrl]//div[#'panelbar-4']/div[pos()=0]/ul[pos()=0]/li[pos()=0]/div[pos()=0]/a[@innertext='ABRECHNUNG']
 				</item>
 				<item
 				name="Abrechnungskategorien"
@@ -2974,10 +2956,10 @@ rxversion="5.4.6.0">
 				name="SteuerfreiInput"
 				id="3f4e8af5-7e8d-4bfc-bb4b-4be57fc5e6bd"
 				searchtimeout="5000ms"
-				capname="spantag"
+				capname="inputtag"
 				addcaps="unknown,webelement,inputtag"
 				refimgid="45643afa-3049-4b53-8ffd-7a0cb84ada77">
-					/dom[@domain=$varUrl]//div//span[@innertext='select']
+					/dom[@domain=$varUrl]//?/div[pos()=1]/table[pos()=0]/tbody[pos()=0]/tr[pos()=4]/td[pos()=0]/table[pos()=0]/tbody[pos()=0]/tr[pos()=0]/td[pos()=1]/div[pos()=0]/span[pos()=0]/span[pos()=0]/input[@name='Steuerfrei_input' and @type='text' and @value='Steuerpflichtig']
 				</item>
 				<item
 				name="Aufwandsarten"
@@ -2992,10 +2974,10 @@ rxversion="5.4.6.0">
 				name="MwStKontoInput"
 				id="b7693e48-0018-4f58-bfce-07628f15cc60"
 				searchtimeout="5000ms"
-				capname="spantag"
+				capname="inputtag"
 				addcaps="unknown,webelement,inputtag"
 				refimgid="8685d680-8f3e-4167-8fba-291fe7bea094">
-					/dom[@domain=$varUrl]//div[pos()=1]/table[pos()=0]/tbody[pos()=0]/tr[pos()=5]/td[pos()=0]/table[pos()=0]/tbody[pos()=0]/tr[pos()=0]/td[pos()=1]/div[pos()=0]/span[pos()=0]/span[pos()=0]/span[pos()=1]/span[@innertext='select']
+					/dom[@domain=$varUrl]//div[pos()=1]/table[pos()=0]/tbody[pos()=0]/tr[pos()=5]/td[pos()=0]/table[pos()=0]/tbody[pos()=0]/tr[pos()=0]/td[pos()=1]/?/?/?/input[@name='MwStKonto_input' and @type='text']
 				</item>
 				<item
 				name="Buchungsschluessel"
@@ -3010,10 +2992,10 @@ rxversion="5.4.6.0">
 				name="Sichtbarkeit"
 				id="5ad58c86-4e27-42f6-9cdd-e5f4a4b866d2"
 				searchtimeout="5000ms"
-				capname="spantag"
+				capname="inputtag"
 				addcaps="unknown,webelement,labeltag"
 				refimgid="fd83421a-ad62-4db9-a8d2-67f6d2c07c5e">
-					/dom[@domain=$varUrl]//div[pos()=1]/table[pos()=0]/tbody[pos()=0]/tr[pos()=7]/td[pos()=0]/table[pos()=0]/tbody[pos()=0]/tr[pos()=0]/td[pos()=1]/div[pos()=0]/span[pos()=0]/span[pos()=0]/span[pos()=1]/span[@innertext='select']
+					/dom[@domain=$varUrl]//div[pos()=1]/table[pos()=0]/tbody[pos()=0]/tr[pos()=7]/td[pos()=0]/table[pos()=0]/tbody[pos()=0]/tr[pos()=0]/td[pos()=1]/?/?/?/input[@name='Visible_input' and @type='text']
 				</item>
 				<item
 				name="Belegerstellungsintervalle"
@@ -3046,10 +3028,10 @@ rxversion="5.4.6.0">
 				name="Rundungart"
 				id="25da2ebb-d4b1-4c3e-af3b-975be1797d34"
 				searchtimeout="5000ms"
-				capname="spantag"
+				capname="inputtag"
 				addcaps="unknown,webelement,labeltag"
 				refimgid="87dba005-d380-40ed-9cb3-9aba82425e0d">
-					/dom[@domain=$varUrl]//div[pos()=1]/table[pos()=0]/tbody[pos()=0]/tr[pos()=6]/td[pos()=0]/table[pos()=0]/tbody[pos()=0]/tr[pos()=0]/td[pos()=1]/div[pos()=0]/span[pos()=0]/span[pos()=0]/span[pos()=1]/span[@innertext='select']
+					/dom[@domain=$varUrl]//div[pos()=1]/table[pos()=0]/tbody[pos()=0]/tr[pos()=6]/td[pos()=0]/table[pos()=0]/tbody[pos()=0]/tr[pos()=0]/td[pos()=1]/?/?/?/input[@name='Rundungart_input' and @type='text']
 				</item>
 				<item
 				name="Bewertungsarten"
@@ -3091,10 +3073,10 @@ rxversion="5.4.6.0">
 				name="TagKriterium5"
 				id="558033c3-eaca-4f1c-b0f8-818af89bec81"
 				searchtimeout="5000ms"
-				capname="spantag"
+				capname="inputtag"
 				addcaps="unknown,webelement,labeltag"
 				refimgid="92cdc7ea-40a9-4958-926d-ed64e029ecdf">
-					/dom[@domain=$varUrl]//?/div[pos()=1]/table[pos()=0]/tbody[pos()=0]/tr[pos()=8]/td[pos()=0]/table[pos()=0]/tbody[pos()=0]/tr[pos()=0]/td[pos()=1]/div[pos()=0]/span[pos()=0]/span[pos()=0]/span[pos()=1]/span[@innertext='select']
+					/dom[@domain=$varUrl]//div[pos()=1]/table[pos()=0]/tbody[pos()=0]/tr[pos()=8]/td[pos()=0]/table[pos()=0]/tbody[pos()=0]/tr[pos()=0]/td[pos()=1]/?/?/?/input[@name='K5_input' and @type='text']
 				</item>
 				<item
 				name="Belegarten"
@@ -3181,10 +3163,10 @@ rxversion="5.4.6.0">
 				name="Frachtzahler2"
 				id="6c7ba4ac-376d-4533-9093-e83037232432"
 				searchtimeout="5000ms"
-				capname="spantag"
+				capname="inputtag"
 				addcaps="unknown,webelement,labeltag"
 				refimgid="000dc922-adad-4133-bd35-a7d0784b1d18">
-					/dom[@domain=$varUrl]//?/div[pos()=1]/table[pos()=0]/tbody[pos()=0]/tr[pos()=4]/td[pos()=0]/table[pos()=0]/tbody[pos()=0]/tr[pos()=0]/td[pos()=1]/div[pos()=0]/span[pos()=0]/span[pos()=0]/span[pos()=1]/span[@innertext='select']
+					/dom[@domain=$varUrl]//?/div[pos()=1]/table[pos()=0]/tbody[pos()=0]/tr[pos()=4]/td[pos()=0]/table[pos()=0]/tbody[pos()=0]/tr[pos()=0]/td[pos()=1]/?/?/?/input[@name='Frachtzahler2_input' and @type='text']
 				</item>
 				<item
 				name="Gewichtsmatrix"
@@ -3256,7 +3238,7 @@ rxversion="5.4.6.0">
 				capname="spantag"
 				addcaps="unknown,webelement,spantag"
 				refimgid="af53e693-4882-47ac-8fe7-30475cc57c70">
-					/dom[@domain=$varUrl]//div[#'MainAreaTabStrip-3']/div[pos()=0]/div[pos()=0]/div[pos()=1]/span[pos()=0]/a[@href~'^http://onweb\.bns-software']/span[pos()=0]
+					/dom[@domain=$varUrl]//div[#'MainAreaTabStrip-3']/div[pos()=0]/div[pos()=0]/div[pos()=1]/span[pos()=0]/a/span[pos()=0]
 				</item>
 				<item
 				name="GueltigAb"
@@ -3313,6 +3295,15 @@ rxversion="5.4.6.0">
 					/dom[@domain=$varUrl]//div[#'panelbar-4']/div[pos()=0]/ul[pos()=0]/li[pos()=0]/ul[pos()=1]/li[pos()=18]/div[pos()=0]/a[@innertext='Nachnahmearten' and @href='javascript:void(0);']
 				</item>
 				<item
+				name="Rechnungsstatus"
+				id="c75de1ba-55a6-4a3e-9f00-f28c6d0472c5"
+				searchtimeout="5000ms"
+				capname="atag"
+				addcaps="unknown,webelement,atag"
+				refimgid="f00aaf3a-33f4-4ad5-9a12-eed93a38db7c">
+					/dom[@domain=$varUrl]//div[#'panelbar-4']/div[pos()=0]/ul[pos()=0]/li[pos()=0]/ul[pos()=1]/li[pos()=19]/div[pos()=0]/a[@innertext='Rechnungsstatus' and @href='javascript:void(0);']
+				</item>
+				<item
 				name="Bezahlt"
 				id="1f1147d5-08aa-402b-85a7-1c04670a3834"
 				searchtimeout="5000ms"
@@ -3355,7 +3346,7 @@ rxversion="5.4.6.0">
 				capname="atag"
 				addcaps="unknown,webelement,atag"
 				refimgid="686174f4-5261-4887-b9f4-e893d89224fe">
-					/dom[@domain=$varUrl]//div[#'panelbar-4']/div[pos()=0]/ul[pos()=0]/li[pos()=1]/ul[pos()=1]/li[pos()=1]/div[pos()=0]/a[@innertext='Konfiguration' and @href='javascript:void(0);']
+					/dom[@domain=$varUrl]//div[#'panelbar-4']/?/?/?/?/?/?/a[@innertext='Konfiguration' and @href='javascript:void(0);']
 				</item>
 				<item
 				name="KIconKAdd6"
@@ -3364,7 +3355,7 @@ rxversion="5.4.6.0">
 				capname="spantag"
 				addcaps="unknown,webelement,spantag"
 				refimgid="21b9a18c-07eb-4d3b-8afd-752f1be281c0">
-					/dom[@domain=$varUrl]//div[#'MainAreaTabStrip-3']/div[pos()=0]/div[pos()=0]/div[pos()=2]/span[pos()=0]/a[@href~'^http://onweb\.bns-software']/span[pos()=0]
+					/dom[@domain=$varUrl]//div[#'MainAreaTabStrip-3']/div[pos()=0]/div[pos()=0]/div[pos()=2]/span[pos()=0]/a/span[pos()=0]
 				</item>
 				<item
 				name="Object"
@@ -3382,7 +3373,7 @@ rxversion="5.4.6.0">
 				capname="atag"
 				addcaps="unknown,webelement,atag"
 				refimgid="125716e1-4448-47bf-916b-a0fe49f3a866">
-					/dom[@domain=$varUrl]//div[#'panelbar-4']/div[pos()=0]/ul[pos()=0]/li[pos()=2]/div[pos()=0]/a[@innertext='DIENSTLEISTUNGEN' and @href~'^http://onweb\.bns-software']
+					/dom[@domain=$varUrl]//div[#'panelbar-4']/div[pos()=0]/ul[pos()=0]/li[pos()=2]/div[pos()=0]/a[@innertext='DIENSTLEISTUNGEN']
 				</item>
 				<item
 				name="Ausruestungen"
@@ -3427,7 +3418,7 @@ rxversion="5.4.6.0">
 				capname="spantag"
 				addcaps="unknown,webelement,spantag"
 				refimgid="08ad9454-6750-4082-ab6b-df2fc85d291a">
-					/dom[@domain=$varUrl]//div[#'MainAreaTabStrip-5']/div[pos()=0]/div[pos()=0]/div[pos()=1]/span[pos()=0]/a[@href~'^http://onweb\.bns-software']/span[pos()=0]
+					/dom[@domain=$varUrl]//div[#'MainAreaTabStrip-5']/div[pos()=0]/div[pos()=0]/div[pos()=1]/span[pos()=0]/a/span[pos()=0]
 				</item>
 				<item
 				name="Kreditorisch"
@@ -3493,13 +3484,13 @@ rxversion="5.4.6.0">
 					/dom[@domain=$varUrl]//input[#'BezEng']
 				</item>
 				<item
-				name="HttpOnwebBnsSoftwareComContentIm"
+				name="CloseRightTab"
 				id="e3631d07-33d3-471c-863f-a3f8298ed03e"
 				searchtimeout="5000ms"
 				capname="imgtag"
 				addcaps="unknown,webelement,imgtag"
-				refimgid="43d4621f-10ea-4215-85f9-987dc3338147">
-					/dom[@domain=$varUrl]//li[#'RightAreaTabStrip_ts_active']/span[pos()=1]/img[@src='http://onweb.bns-software.com/Content/images/close.png']
+				refimgid="d5519a94-47b7-4816-9f9f-f28caee4add8">
+					/dom[@domain=$varUrl]//li[#'RightAreaTabStrip_ts_active']/span[pos()=1]/img[@src~'/Content/images/close.png']
 				</item>
 				<item
 				name="Kategorien"
@@ -3525,7 +3516,7 @@ rxversion="5.4.6.0">
 				searchtimeout="5000ms"
 				capname="spantag"
 				addcaps="unknown,webelement,spantag"
-				refimgid="0ddb7ec7-9be2-46ea-9d62-02f447e1869f">
+				refimgid="216e0dec-6943-4224-bc9c-82ad9cc40184">
 					/dom[@domain=$varUrl]//div[@class='coolfieldset-content']//td[@class='ControlArea' and @data-label='Kategorien']//a/span[@class='k-icon k-i-arrow-e']
 				</item>
 				<item
@@ -3535,7 +3526,7 @@ rxversion="5.4.6.0">
 				capname="atag"
 				addcaps="unknown,webelement,atag"
 				refimgid="fee99256-728a-4300-9624-c33ea758d8f2">
-					/dom[@domain=$varUrl]//div[#'panelbar-4']/div[pos()=0]/ul[pos()=0]/li[pos()=3]/div[pos()=0]/a[@innertext='ROUTING' and @href~'^http://onweb\.bns-software']
+					/dom[@domain=$varUrl]//div[#'panelbar-4']/div[pos()=0]/ul[pos()=0]/li[pos()=3]/div[pos()=0]/a[@innertext='ROUTING']
 				</item>
 				<item
 				name="Routingkoepfe"
@@ -3589,7 +3580,7 @@ rxversion="5.4.6.0">
 				capname="inputtag"
 				addcaps="unknown,webelement,inputtag"
 				refimgid="47157f19-7bdd-4acc-807f-2996ad42aec5">
-					/dom[@domain=$varUrl]//?/div[pos()=1]/table[pos()=0]/tbody[pos()=0]/tr[pos()=5]/td[pos()=0]/table[pos()=0]/tbody[pos()=0]/tr[pos()=0]/td[@data-label='Priorit&#228;t']/div[pos()=0]/span[pos()=0]/span[pos()=0]/input[@type='text' and @value='0']
+					/dom[@domain=$varUrl]//div[pos()=1]/table[pos()=0]/tbody[pos()=0]/tr[pos()=5]/td[pos()=0]/table[pos()=0]/tbody[pos()=0]/tr[pos()=0]/td[pos()=1]/div[pos()=0]/span[pos()=0]/span[pos()=0]/input[@type='text' and @value='0']
 				</item>
 				<item
 				name="Routingstationen"
@@ -3625,7 +3616,7 @@ rxversion="5.4.6.0">
 				capname="inputtag"
 				addcaps="unknown,webelement,tdtag"
 				refimgid="17079454-1b69-46d1-b238-43e29c64aa29">
-					/dom[@domain=$varUrl]//?/div[pos()=1]/table[pos()=0]/tbody[pos()=0]/tr[pos()=5]/td[pos()=0]/table[pos()=0]/tbody[pos()=0]/tr[pos()=0]/td[@data-label='Position']/div[pos()=0]/span[pos()=0]/span[pos()=0]/input[@type='text' and @value='0']
+					/dom[@domain=$varUrl]//div[pos()=1]/table[pos()=0]/tbody[pos()=0]/tr[pos()=5]/td[pos()=0]/table[pos()=0]/tbody[pos()=0]/tr[pos()=0]/td[pos()=1]/div[pos()=0]/span[pos()=0]/span[pos()=0]/input[@type='text' and @value='0']
 				</item>
 				<item
 				name="VERTRAEGE"
@@ -3634,7 +3625,7 @@ rxversion="5.4.6.0">
 				capname="atag"
 				addcaps="unknown,webelement,atag"
 				refimgid="9a496baa-8aba-44cc-8db7-4318b2457de3">
-					/dom[@domain=$varUrl]//div[#'panelbar-4']/div[pos()=0]/ul[pos()=0]/li[pos()=4]/div[pos()=0]/a[@innertext='VERTR&#196;GE' and @href~'^http://onweb\.bns-software']
+					/dom[@domain=$varUrl]//div[#'panelbar-4']/div[pos()=0]/ul[pos()=0]/li[pos()=4]/div[pos()=0]/a[@innertext='VERTR&#196;GE']
 				</item>
 				<item
 				name="Vertragsfristen"
@@ -3651,8 +3642,8 @@ rxversion="5.4.6.0">
 				searchtimeout="5000ms"
 				capname="inputtag"
 				addcaps="unknown,webelement,inputtag"
-				refimgid="ea1375d6-e76d-4ac6-9478-7a8ee81d3a4b">
-					/dom[@domain=$varUrl]//?/div[pos()=1]/table[pos()=0]/tbody[pos()=0]/tr[pos()=4]/td[pos()=0]/table[pos()=0]/tbody[pos()=0]/tr[pos()=0]/td[@data-label='Anzahl in Tagen']/div[pos()=0]/span[pos()=0]/span[pos()=0]/input[@type='text']
+				refimgid="4feb1a12-3e63-493e-a42c-de8c9f0c7944">
+					/dom[@domain=$varUrl]//div[pos()=1]/table[pos()=0]/tbody[pos()=0]/tr[pos()=4]/td[pos()=0]/table[pos()=0]/tbody[pos()=0]/tr[pos()=0]/td[pos()=1]/div[pos()=0]/span[pos()=0]/span[pos()=0]/input[@type='text']
 				</item>
 				<item
 				name="Vertragsstati"
@@ -3759,7 +3750,7 @@ rxversion="5.4.6.0">
 				searchtimeout="5000ms"
 				capname="divtag"
 				addcaps="unknown,webelement,divtag"
-				refimgid="3f7bc04a-b653-4816-9dab-3ebbc78b351e">
+				refimgid="1eb18cba-ad90-4dae-91b8-aa62d8500e58">
 					/dom[@domain=$varUrl]//div[#'panelbar-4']/div[pos()=0]/div[pos()=1]/div[pos()=0]
 				</item>
 				<item
@@ -3768,7 +3759,7 @@ rxversion="5.4.6.0">
 				searchtimeout="5000ms"
 				capname="divtag"
 				addcaps="unknown,webelement,divtag"
-				refimgid="c172e84f-9426-4465-9dc0-27ff646cfb05">
+				refimgid="cfdcd558-aa26-44b0-b17e-8bf0bd4f4878">
 					/dom[@domain=$varUrl]//div[#'panelbar-4']/div[pos()=0]/div[pos()=1]
 				</item>
 				<item
@@ -3778,7 +3769,7 @@ rxversion="5.4.6.0">
 				capname="atag"
 				addcaps="unknown,webelement,atag"
 				refimgid="d581f6ed-5c65-43bf-9d13-245577f3cf2d">
-					/dom[@domain=$varUrl]//div[#'panelbar-4']/div[pos()=0]/ul[pos()=0]/li[pos()=5]/div[pos()=0]/a[@innertext='FUHRPARK' and @href~'^http://onweb\.bns-software']
+					/dom[@domain=$varUrl]//div[#'panelbar-4']/div[pos()=0]/ul[pos()=0]/li[pos()=5]/div[pos()=0]/a[@innertext='FUHRPARK']
 				</item>
 				<item
 				name="FAHRZEUGE"
@@ -3787,7 +3778,7 @@ rxversion="5.4.6.0">
 				capname="atag"
 				addcaps="unknown,webelement,atag"
 				refimgid="b55f1c88-702e-48c0-80a4-620593541518">
-					/dom[@domain=$varUrl]//div[#'panelbar-4']/div[pos()=0]/ul[pos()=0]/li[pos()=5]/ul[pos()=1]/li[pos()=0]/div[pos()=0]/a[@innertext='FAHRZEUGE' and @href~'^http://onweb\.bns-software']
+					/dom[@domain=$varUrl]//div[#'panelbar-4']/div[pos()=0]/ul[pos()=0]/li[pos()=5]/ul[pos()=1]/li[pos()=0]/div[pos()=0]/a[@innertext='FAHRZEUGE']
 				</item>
 				<item
 				name="Fahrzeuge1"
@@ -3832,7 +3823,7 @@ rxversion="5.4.6.0">
 				capname="atag"
 				addcaps="unknown,webelement,atag"
 				refimgid="7bcd091e-2723-46e0-8aa6-335bce55e7b2">
-					/dom[@domain=$varUrl]//div[#'panelbar-4']/div[pos()=0]/ul[pos()=0]/li[pos()=5]/ul[pos()=1]/li[pos()=1]/div[pos()=0]/a[@innertext='TRANSPORTMITTEL' and @href~'^http://onweb\.bns-software']
+					/dom[@domain=$varUrl]//div[#'panelbar-4']/div[pos()=0]/ul[pos()=0]/li[pos()=5]/ul[pos()=1]/li[pos()=1]/div[pos()=0]/a[@innertext='TRANSPORTMITTEL']
 				</item>
 				<item
 				name="Transportmittelstamm"
@@ -3868,7 +3859,7 @@ rxversion="5.4.6.0">
 				capname="atag"
 				addcaps="unknown,webelement,atag"
 				refimgid="f866f4a8-d2f1-45d5-969c-c0b0f1360f67">
-					/dom[@domain=$varUrl]//div[#'panelbar-4']/div[pos()=0]/ul[pos()=0]/li[pos()=5]/ul[pos()=1]/li[pos()=2]/div[pos()=0]/a[@innertext='ALLGEMEINE KONFIGURATION' and @href~'^http://onweb\.bns-software']
+					/dom[@domain=$varUrl]//div[#'panelbar-4']/div[pos()=0]/ul[pos()=0]/li[pos()=5]/ul[pos()=1]/li[pos()=2]/div[pos()=0]/a[@innertext='ALLGEMEINE KONFIGURATION']
 				</item>
 				<item
 				name="Achstypen"
@@ -3922,7 +3913,7 @@ rxversion="5.4.6.0">
 				capname="inputtag"
 				addcaps="unknown,webelement,inputtag"
 				refimgid="21be6a9e-3d39-41ec-a8be-8748d952efac">
-					/dom[@domain=$varUrl]//div[pos()=1]/table[pos()=0]/tbody[pos()=0]/tr[pos()=9]/td[pos()=0]/table[pos()=0]/tbody[pos()=0]/tr[pos()=0]/td[pos()=1]/div[pos()=0]/span[pos()=0]/span[pos()=0]/input[@title='' and @type='text']
+					/dom[@domain=$varUrl]//div[pos()=1]/table[pos()=0]/tbody[pos()=0]/tr[pos()=9]/td[pos()=0]/table[pos()=0]/tbody[pos()=0]/tr[pos()=0]/td[pos()=1]/div[pos()=0]/span[pos()=0]/span[pos()=0]/input[@type='text']
 				</item>
 				<item
 				name="Federungstypen"
@@ -3976,7 +3967,7 @@ rxversion="5.4.6.0">
 				capname="imgtag"
 				addcaps="unknown,webelement,imgtag"
 				refimgid="a186581a-3976-4934-97b0-1a436cd99855">
-					/dom[@domain=$varUrl]//div[#'MainAreaTabStrip']/span[pos()=1]/span[pos()=0]/ul[pos()=0]/li[pos()=2]/span[pos()=1]/img[@src='http://onweb.bns-software.com/Content/images/close.png']
+					/dom[@domain=$varUrl]//div[#'MainAreaTabStrip']/span[pos()=1]/span[pos()=0]/ul[pos()=0]/li[pos()=2]/span[pos()=1]/img[@src~'/Content/images/close.png']
 				</item>
 				<item
 				name="Hersteller"
@@ -4003,7 +3994,7 @@ rxversion="5.4.6.0">
 				capname="atag"
 				addcaps="unknown,webelement,atag"
 				refimgid="8d0d979c-236b-41b5-9221-5286e5bbb0aa">
-					/dom[@domain=$varUrl]//div[#'panelbar-4']/div[pos()=0]/ul[pos()=0]/li[pos()=5]/ul[pos()=1]/li[pos()=2]/ul[pos()=1]/li[pos()=9]/div[pos()=0]/a[@innertext='&#214;lsorten' and @href='javascript:void(0);']
+					/dom[@domain=$varUrl]//div[#'panelbar-4']/div[pos()=0]/ul[pos()=0]/?/ul[pos()=1]/li[pos()=2]/ul[pos()=1]/li[pos()=9]/div[pos()=0]/a[@innertext='&#214;lsorten' and @href='javascript:void(0);']
 				</item>
 				<item
 				name="SynthetikInput"
@@ -4039,7 +4030,7 @@ rxversion="5.4.6.0">
 				capname="inputtag"
 				addcaps="unknown,webelement,inputtag"
 				refimgid="0f94c62a-be52-4c99-82e0-a93a04225bb3">
-					/dom[@domain=$varUrl]//div[pos()=1]/table[pos()=0]/tbody[pos()=0]/tr[pos()=8]/td[pos()=0]/table[pos()=0]/tbody[pos()=0]/tr[pos()=0]/td[pos()=1]/div[pos()=0]/span[pos()=0]/span[pos()=0]/input[@title='' and @type='text']
+					/dom[@domain=$varUrl]//div[pos()=1]/table[pos()=0]/tbody[pos()=0]/tr[pos()=8]/td[pos()=0]/table[pos()=0]/tbody[pos()=0]/tr[pos()=0]/td[pos()=1]/div[pos()=0]/span[pos()=0]/span[pos()=0]/input[@type='text']
 				</item>
 				<item
 				name="GENEHMIGUNGEN"
@@ -4048,7 +4039,7 @@ rxversion="5.4.6.0">
 				capname="atag"
 				addcaps="unknown,webelement,atag"
 				refimgid="f60b0b03-c98e-4d1c-9eb4-1b2939a8c467">
-					/dom[@domain=$varUrl]//div[#'panelbar-4']/div[pos()=0]/ul[pos()=0]/li[pos()=5]/ul[pos()=1]/li[pos()=3]/div[pos()=0]/a[@innertext='GENEHMIGUNGEN' and @href~'^http://onweb\.bns-software']
+					/dom[@domain=$varUrl]//div[#'panelbar-4']/div[pos()=0]/ul[pos()=0]/li[pos()=5]/ul[pos()=1]/li[pos()=3]/div[pos()=0]/a[@innertext='GENEHMIGUNGEN']
 				</item>
 				<item
 				name="Genehmigungen1"
@@ -4092,8 +4083,8 @@ rxversion="5.4.6.0">
 				searchtimeout="5000ms"
 				capname="atag"
 				addcaps="unknown,webelement,atag"
-				refimgid="48760e6b-6b7f-480c-b4f2-49d09ec2bdce">
-					/dom[@domain=$varUrl]//div[#'panelbar-4']/div[pos()=0]/ul[pos()=0]/li[pos()=5]/ul[pos()=1]/li[pos()=4]/div[pos()=0]/a[@innertext='KARTEN' and @href~'^http://onweb\.bns-software']
+				refimgid="47b602f1-4121-43d1-8d24-596daff875a9">
+					/dom[@domain=$varUrl]//div[#'panelbar-4']/div[pos()=0]/ul[pos()=0]/li[pos()=5]/ul[pos()=1]/li[pos()=4]/div[pos()=0]/a[@innertext='KARTEN']
 				</item>
 				<item
 				name="Kartenverwaltung"
@@ -4129,7 +4120,7 @@ rxversion="5.4.6.0">
 				capname="atag"
 				addcaps="unknown,webelement,atag"
 				refimgid="4740dd61-1594-4632-acb0-4e1c341cb011">
-					/dom[@domain=$varUrl]//div[#'panelbar-4']/div[pos()=0]/ul[pos()=0]/li[pos()=5]/ul[pos()=1]/li[pos()=5]/div[pos()=0]/a[@innertext='LAGER' and @href~'^http://onweb\.bns-software']
+					/dom[@domain=$varUrl]//div[#'panelbar-4']/div[pos()=0]/ul[pos()=0]/li[pos()=5]/ul[pos()=1]/li[pos()=5]/div[pos()=0]/a[@innertext='LAGER']
 				</item>
 				<item
 				name="Scannerstamm"
@@ -4174,7 +4165,7 @@ rxversion="5.4.6.0">
 				capname="atag"
 				addcaps="unknown,webelement,atag"
 				refimgid="22a611a1-da2b-48d4-ac53-a403931c0def">
-					/dom[@domain=$varUrl]//div[#'panelbar-4']/div[pos()=0]/ul[pos()=0]/li[pos()=5]/ul[pos()=1]/li[pos()=6]/div[pos()=0]/a[@innertext='MAUT' and @href~'^http://onweb\.bns-software']
+					/dom[@domain=$varUrl]//div[#'panelbar-4']/div[pos()=0]/ul[pos()=0]/li[pos()=5]/ul[pos()=1]/li[pos()=6]/div[pos()=0]/a[@innertext='MAUT']
 				</item>
 				<item
 				name="Mautsaetze"
@@ -4210,7 +4201,7 @@ rxversion="5.4.6.0">
 				capname="atag"
 				addcaps="unknown,webelement,atag"
 				refimgid="639cf03b-5681-4bf3-91fe-2530dc8516a3">
-					/dom[@domain=$varUrl]//div[#'panelbar-4']/div[pos()=0]/ul[pos()=0]/li[pos()=5]/ul[pos()=1]/li[pos()=7]/div[pos()=0]/a[@innertext='QM' and @href~'^http://onweb\.bns-software']
+					/dom[@domain=$varUrl]//div[#'panelbar-4']/div[pos()=0]/ul[pos()=0]/li[pos()=5]/ul[pos()=1]/li[pos()=7]/div[pos()=0]/a[@innertext='QM']
 				</item>
 				<item
 				name="QMKategorien"
@@ -4246,7 +4237,7 @@ rxversion="5.4.6.0">
 				capname="atag"
 				addcaps="unknown,webelement,atag"
 				refimgid="f90e3434-48c9-479a-afdf-64ea4449bd18">
-					/dom[@domain=$varUrl]//div[#'panelbar-4']/div[pos()=0]/ul[pos()=0]/li[pos()=5]/ul[pos()=1]/li[pos()=8]/div[pos()=0]/a[@innertext='SCHADENSMANAGEMENT' and @href~'^http://onweb\.bns-software']
+					/dom[@domain=$varUrl]//div[#'panelbar-4']/div[pos()=0]/ul[pos()=0]/li[pos()=5]/ul[pos()=1]/li[pos()=8]/div[pos()=0]/a[@innertext='SCHADENSMANAGEMENT']
 				</item>
 				<item
 				name="Schadensmanagement1"
@@ -4267,12 +4258,12 @@ rxversion="5.4.6.0">
 					/dom[@domain=$varUrl]//input[#'Frachtzahler']
 				</item>
 				<item
-				name="Konfiguration6"
+				name="SchadeKonfiguration"
 				id="bf7d6527-6795-489a-a932-c333584cc8e0"
 				searchtimeout="5000ms"
 				capname="atag"
 				addcaps="unknown,webelement,atag"
-				refimgid="398ca6d7-704c-44e8-80d2-fa1bb762c88e">
+				refimgid="d4baf87d-6467-40f7-b8f5-88af4ffab960">
 					/dom[@domain=$varUrl]//div[#'panelbar-4']/div[pos()=0]/ul[pos()=0]/li[pos()=5]/ul[pos()=1]/li[pos()=8]/ul[pos()=1]/li[pos()=1]/div[pos()=0]/a[@innertext='Konfiguration' and @href='javascript:void(0);']
 				</item>
 				<item
@@ -4282,7 +4273,7 @@ rxversion="5.4.6.0">
 				capname="atag"
 				addcaps="unknown,webelement,atag"
 				refimgid="5a540130-1341-4b9c-8eda-094c770a28bc">
-					/dom[@domain=$varUrl]//div[#'panelbar-4']/div[pos()=0]/ul[pos()=0]/li[pos()=5]/ul[pos()=1]/li[pos()=9]/div[pos()=0]/a[@innertext='TREIBSTOFF' and @href~'^http://onweb\.bns-software']
+					/dom[@domain=$varUrl]//div[#'panelbar-4']/div[pos()=0]/ul[pos()=0]/li[pos()=5]/ul[pos()=1]/li[pos()=9]/div[pos()=0]/a[@innertext='TREIBSTOFF']
 				</item>
 				<item
 				name="Treibstoffarten"
@@ -4308,7 +4299,7 @@ rxversion="5.4.6.0">
 				searchtimeout="5000ms"
 				capname="atag"
 				addcaps="unknown,webelement,atag"
-				refimgid="33d26fd5-1a6f-4679-9124-f7f3119a5160">
+				refimgid="1597e047-6c92-476c-9304-ae0539ec9363">
 					/dom[@domain=$varUrl]//div[#'panelbar-4']/div[pos()=0]/ul[pos()=0]/li[pos()=5]/ul[pos()=1]/li[pos()=9]/ul[pos()=1]/li[pos()=2]/div[pos()=0]/a[@innertext='Treibstoffpreise' and @href='javascript:void(0);']
 				</item>
 				<item
@@ -4336,7 +4327,7 @@ rxversion="5.4.6.0">
 				capname="atag"
 				addcaps="unknown,webelement,atag"
 				refimgid="52159d4c-cc33-422a-8c09-7f815b5fe9e0">
-					/dom[@domain=$varUrl]//div[#'panelbar-4']/div[pos()=0]/ul[pos()=0]/li[pos()=6]/div[pos()=0]/a[@innertext='PERSONAL' and @href~'^http://onweb\.bns-software']
+					/dom[@domain=$varUrl]//div[#'panelbar-4']/div[pos()=0]/ul[pos()=0]/li[pos()=6]/div[pos()=0]/a[@innertext='PERSONAL']
 				</item>
 				<item
 				name="Personalverwaltung"
@@ -4372,7 +4363,7 @@ rxversion="5.4.6.0">
 				capname="atag"
 				addcaps="unknown,webelement,atag"
 				refimgid="40315fe2-d679-41d7-ab41-c4c456e30aeb">
-					/dom[@domain=$varUrl]//div[#'panelbar-4']/div[pos()=0]/ul[pos()=0]/li[pos()=7]/div[pos()=0]/a[@innertext='QUALIT&#196;TMANAGEMENT' and @href~'^http://onweb\.bns-software']
+					/dom[@domain=$varUrl]//div[#'panelbar-4']/div[pos()=0]/ul[pos()=0]/li[pos()=7]/div[pos()=0]/a[@innertext='QUALIT&#196;TMANAGEMENT']
 				</item>
 				<item
 				name="Qualitaetsmanagement"
@@ -4399,7 +4390,7 @@ rxversion="5.4.6.0">
 				capname="atag"
 				addcaps="unknown,webelement,atag"
 				refimgid="52c9a7a4-93ca-49bc-9b0c-172f836fceda">
-					/dom[@domain=$varUrl]//div[#'panelbar-4']/div[pos()=0]/ul[pos()=0]/li[pos()=8]/div[pos()=0]/a[@innertext='PACKMITTEL' and @href~'^http://onweb\.bns-software']
+					/dom[@domain=$varUrl]//div[#'panelbar-4']/div[pos()=0]/ul[pos()=0]/li[pos()=8]/div[pos()=0]/a[@innertext='PACKMITTEL']
 				</item>
 				<item
 				name="Packmittel1"
@@ -4435,7 +4426,7 @@ rxversion="5.4.6.0">
 				capname="atag"
 				addcaps="unknown,webelement,atag"
 				refimgid="4faf50ae-20fa-4b25-b41d-13b6dece56a4">
-					/dom[@domain=$varUrl]//div[#'panelbar-4']/div[pos()=0]/ul[pos()=0]/li[pos()=9]/div[pos()=0]/a[@innertext='ALLGEMEIN' and @href~'^http://onweb\.bns-software']
+					/dom[@domain=$varUrl]//div[#'panelbar-4']/div[pos()=0]/ul[pos()=0]/li[pos()=9]/div[pos()=0]/a[@innertext='ALLGEMEIN']
 				</item>
 				<item
 				name="Abfallzertifikate"
@@ -4543,7 +4534,7 @@ rxversion="5.4.6.0">
 				capname="spantag"
 				addcaps="unknown,webelement,spantag"
 				refimgid="bb45d96f-e846-48fa-bb92-1a8d24b7bb51">
-					/dom[@domain=$varUrl]//div[#'MainAreaTabStrip-2']/div[pos()=0]/div[pos()=0]/div[pos()=1]/span[pos()=0]/a[@href~'^http://onweb\.bns-software']/span[pos()=0]
+					/dom[@domain=$varUrl]//div[#'MainAreaTabStrip-2']/div[pos()=0]/div[pos()=0]/div[pos()=1]/span[pos()=0]/a/span[pos()=0]
 				</item>
 				<item
 				name="Ereigniskategorien"
@@ -4777,7 +4768,7 @@ rxversion="5.4.6.0">
 				capname="atag"
 				addcaps="unknown,webelement,atag"
 				refimgid="e04d438a-6132-448c-81fd-d8086e4cf2ba">
-					/dom[@domain=$varUrl]//div[#'panelbar-4']/div[pos()=0]/ul[pos()=0]/li[pos()=10]/div[pos()=0]/a[@innertext='BORDERO' and @href~'^http://onweb\.bns-software']
+					/dom[@domain=$varUrl]//div[#'panelbar-4']/div[pos()=0]/ul[pos()=0]/li[pos()=10]/div[pos()=0]/a[@innertext='BORDERO']
 				</item>
 				<item
 				name="StatusLadeeinheiten"
@@ -4795,7 +4786,7 @@ rxversion="5.4.6.0">
 				capname="spantag"
 				addcaps="unknown,webelement,spantag"
 				refimgid="4f636b9b-941f-4835-8957-c49adb297278">
-					/dom[@domain=$varUrl]//div[#'MainAreaTabStrip-6']/div[pos()=0]/div[pos()=0]/div[pos()=1]/span[pos()=0]/a[@href~'^http://onweb\.bns-software']/span[pos()=0]
+					/dom[@domain=$varUrl]//div[#'MainAreaTabStrip-6']/div[pos()=0]/div[pos()=0]/div[pos()=1]/span[pos()=0]/a/span[pos()=0]
 				</item>
 				<item
 				name="StatusZeitschranken"
@@ -4822,7 +4813,7 @@ rxversion="5.4.6.0">
 				capname="atag"
 				addcaps="unknown,webelement,atag"
 				refimgid="7934c1d8-f757-4539-951f-b341d959aa6b">
-					/dom[@domain=$varUrl]//div[#'panelbar-4']/div[pos()=0]/ul[pos()=0]/li[pos()=11]/div[pos()=0]/a[@innertext='BETRIEB' and @href~'^http://onweb\.bns-software']
+					/dom[@domain=$varUrl]//div[#'panelbar-4']/div[pos()=0]/ul[pos()=0]/li[pos()=11]/div[pos()=0]/a[@innertext='BETRIEB']
 				</item>
 				<item
 				name="Kontenrahmen"
@@ -4894,7 +4885,7 @@ rxversion="5.4.6.0">
 				capname="inputtag"
 				addcaps="unknown,webelement,inputtag"
 				refimgid="42c3aa9e-7826-4d0d-bccd-cc3d160923df">
-					/dom[@domain=$varUrl]//div[pos()=1]/table[pos()=0]/tbody[pos()=0]/tr[pos()=5]/td[pos()=0]/table[pos()=0]/tbody[pos()=0]/tr[pos()=0]/td[pos()=1]/div[@title='']/span[pos()=0]/span[pos()=0]/input[@title='' and @name='Geschaeftsbereichid_input' and @type='text']
+					/dom[@domain=$varUrl]//div[pos()=1]/table[pos()=0]/tbody[pos()=0]/tr[pos()=5]/td[pos()=0]/table[pos()=0]/tbody[pos()=0]/tr[pos()=0]/td[pos()=1]/div[@title='']/span[pos()=0]/span[pos()=0]/input[@name='Geschaeftsbereichid_input' and @type='text']
 				</item>
 				<item
 				name="NiederlassungInput"
@@ -4903,7 +4894,7 @@ rxversion="5.4.6.0">
 				capname="inputtag"
 				addcaps="unknown,webelement,inputtag"
 				refimgid="539897b9-fca6-4a14-97d7-d92416521c02">
-					/dom[@domain=$varUrl]//div[pos()=1]/table[pos()=0]/tbody[pos()=0]/tr[pos()=5]/td[pos()=0]/table[pos()=0]/tbody[pos()=0]/tr[pos()=0]/td[pos()=1]/div[@title='']/span[pos()=0]/span[pos()=0]/input[@title='' and @name='Niederlassung_input' and @type='text']
+					/dom[@domain=$varUrl]//div[pos()=1]/table[pos()=0]/tbody[pos()=0]/tr[pos()=5]/td[pos()=0]/table[pos()=0]/tbody[pos()=0]/tr[pos()=0]/td[pos()=1]/div[@title='']/span[pos()=0]/span[pos()=0]/input[@name='Niederlassung_input' and @type='text']
 				</item>
 				<item
 				name="Grevenbroich"
@@ -4939,7 +4930,7 @@ rxversion="5.4.6.0">
 				capname="atag"
 				addcaps="unknown,webelement,atag"
 				refimgid="e9714861-fc4b-4353-a6dd-35f8dc8a6510">
-					/dom[@domain=$varUrl]//a[@innertext='zur&#252;ck zum Login']
+					/dom[@domain=$varUrl]//a[@innertext='&#187;zur&#252;ck zum Login&#171;']
 				</item>
 				<item
 				name="Benutzername"
@@ -4952,536 +4943,482 @@ rxversion="5.4.6.0">
 					/dom[@domain=$varUrl]//div[#'LoginPanel']/div[pos()=0]/div[pos()=0]/label[@innertext='Benutzername']
 				</item>
 				<item
-				name="InputTagUrl"
-				id="4be6bded-20f3-405c-a7c0-7900c8b5f2df"
+				name="Select6"
+				id="d404ee59-6c6b-4c22-a004-772d53e497ea"
 				searchtimeout="5000ms"
-				capname="inputtag"
-				addcaps="unknown,webelement,inputtag"
-				refimgid="ea4d8666-7360-4cd5-98fe-c87f00fd4a3f">
-					/dom[@domain=$varUrl]//input[@id='Url']
-				</item>
-				<item
-				name="SettingButton"
-				id="189eb3e3-cc01-4ff1-be39-9f28a784eafa"
-				searchtimeout="5000ms"
-				capname="atag"
-				addcaps="unknown,webelement,spantag"
-				refimgid="b0da27ad-6f75-420a-a7c7-dbe1f959f1fc">
-					/dom[@domain=$varUrl]//div[#'MainAreaTabStrip-1']//a[@class='k-button k-link settings tooltip']
-				</item>
-				<item
-				name="Reinigung"
-				id="4b43c292-c0ab-4317-b6ec-94bc5671d2fa"
-				searchtimeout="5000ms"
-				capname="litag"
-				refpath="/dom[@domain='onweb.bns-software.com']//body[#'main']/div[17]/div/div[2]/ul/li[@innertext='Reinigung']"
-				addcaps="unknown,webelement,litag"
-				refimgid="a9f8910e-31c7-4619-9db8-e61a65247fab">
-					/dom[@domain=$varUrl]//body[#'main']/div[pos()=16]/div[pos()=0]/div[pos()=1]/ul[pos()=0]/li[@innertext='Reinigung']
-				</item>
-				<item
-				name="Dokumentation"
-				id="390b23dd-77c4-4759-b532-998fc00daa7f"
-				searchtimeout="5000ms"
-				capname="litag"
-				refpath="/dom[@domain='onweb.bns-software.com']//body[#'main']/div[3]/div/div[2]/ul/li[@innertext='Dokumentation']"
-				addcaps="unknown,webelement,litag"
-				refimgid="1523a2ef-6524-44c9-b459-8215a97a39ea">
-					/dom[@domain=$varUrl]//body[#'main']/div[pos()=2]/div[pos()=0]/div[pos()=1]/ul[pos()=0]/li[@innertext='Dokumentation']
-				</item>
-				<item
-				name="KItemKLast"
-				id="353c828d-29a4-458f-b825-9c574dde5df5"
-				searchtimeout="5000ms"
-				capname="litag"
-				addcaps="unknown,webelement,litag"
-				refimgid="1f735eb5-e38a-46e5-9143-c812c5f9a0ed">
-					/dom[@domain=$varUrl]//div[#'panelbar-2']/div[pos()=0]/ul[pos()=0]/li[pos()=6]
-				</item>
-				<item
-				name="KItemKFirst"
-				id="8a1a4483-e601-452b-92e7-4c304f72666a"
-				searchtimeout="5000ms"
-				capname="litag"
-				addcaps="unknown,webelement,litag"
-				refimgid="b537219a-fe12-4894-9902-027ac7803cab">
-					/dom[@domain=$varUrl]//div[#'panelbar-4']/div[pos()=0]/ul[pos()=0]/li[pos()=0]
-				</item>
-				<item
-				name="KMid"
-				id="f94a6b44-774a-4bc5-96ec-01c558544da2"
-				searchtimeout="5000ms"
-				capname="divtag"
-				addcaps="unknown,webelement,divtag"
-				refimgid="6c1b07e6-9500-4840-9e10-e1e2a21508f2">
-					/dom[@domain=$varUrl]//div[#'panelbar-4']/div[pos()=0]/ul[pos()=0]/li[pos()=10]/div[pos()=0]
-				</item>
-				<item
-				name="Rechnungsstatus"
-				id="b92fefa3-7798-4ab9-81cf-e6935600cb07"
-				searchtimeout="5000ms"
-				capname="atag"
-				addcaps="unknown,webelement,atag"
-				refimgid="f749d3c1-cffc-4c9c-b622-43be014783eb">
-					/dom[@domain=$varUrl]//div[#'panelbar-4']/?/?/?/?/?/?/a[@innertext='Rechnungsstatus' and @href='javascript:void(0);']
-				</item>
-				<item
-				name="KItem"
-				id="db457af6-696d-4494-99bb-2cb6736ace10"
-				searchtimeout="5000ms"
-				capname="litag"
-				addcaps="unknown,webelement,litag"
-				refimgid="2b62f6c1-cff5-4c94-95b2-4569ee401968">
-					/dom[@domain=$varUrl]//div[#'panelbar-4']/div[pos()=0]/ul[pos()=0]/li[pos()=0]/ul[pos()=1]/li[pos()=13]
-				</item>
-				<item
-				name="GESCHAEFTSOBJEKTEWORKFLOW"
-				id="ea9a960b-8a4a-4384-9594-f3240f3be035"
-				searchtimeout="5000ms"
-				capname="atag"
-				addcaps="unknown,webelement,atag"
-				refimgid="552c0077-1496-4a47-99b3-cd8b4d9fa093">
-					/dom[@domain=$varUrl]//div[#'panelbar-4']/div[pos()=0]/ul[pos()=0]/li[pos()=12]/div[pos()=0]/a[@innertext~'^GESCHAEFTSOBJEKTE\ WORKFLO' and @href~'^http://onweb\.bns-software']
-				</item>
-				<item
-				name="GeschaeftsobjektWorkflows"
-				id="99bf9ad2-7c8b-4fec-bf7b-21e2b2900c99"
-				searchtimeout="5000ms"
-				capname="atag"
-				addcaps="unknown,webelement,atag"
-				refimgid="953fc397-7d86-4de4-a51c-a6e3a30651a1">
-					/dom[@domain=$varUrl]//div[#'panelbar-4']/div[pos()=0]/ul[pos()=0]/li[pos()=12]/ul[pos()=1]/li[pos()=0]/div[pos()=0]/a[@innertext~'^Geschaeftsobjekt\ Workflow' and @href='javascript:void(0);']
-				</item>
-				<item
-				name="GeschaeftsobjektWorkflowaktionen"
-				id="5388d609-be31-490b-bff8-f14e6d186173"
-				searchtimeout="5000ms"
-				capname="atag"
-				addcaps="unknown,webelement,atag"
-				refimgid="ba6cf5ed-fccc-4615-ba88-95442bc873b6">
-					/dom[@domain=$varUrl]//div[#'panelbar-4']/div[pos()=0]/ul[pos()=0]/li[pos()=12]/ul[pos()=1]/li[pos()=1]/div[pos()=0]/a[@innertext~'^Geschaeftsobjekt\ Workflow' and @href='javascript:void(0);']
-				</item>
-				<item
-				name="Aktion"
-				id="5b2723b2-0a6a-473d-ab8a-30fe34386ceb"
-				searchtimeout="5000ms"
-				capname="textareatag"
-				addcaps="unknown,webelement,textareatag"
-				refimgid="ab22ad89-6211-4928-8aca-0f089c9e5522">
-					/dom[@domain=$varUrl]//textarea[#'Aktion']
-				</item>
-				<item
-				name="ONFLEET"
-				id="22908ff0-c0a8-4584-87f0-b5de7a690949"
-				searchtimeout="30000ms"
-				capname="atag"
-				refpath="/dom[@domain='onweb.bns-software.com']//ul[#'panelbar']/li[5]/a[@innertext='ONFLEET']"
-				addcaps="unknown,webelement,atag"
-				refimgid="86a83f64-6cfc-4224-a0f0-d34fd99e94e3">
-					/dom[@domain=$varUrl]//ul[#'panelbar']/?/?/a[@innertext='ONFLEET']
-				</item>
-				<item
-				name="NACHRICHTEN"
-				id="afa51a00-956c-404d-81e2-3021fb30b374"
-				searchtimeout="30000ms"
-				capname="atag"
-				refpath="/dom[@domain='onweb.bns-software.com']//div[#'panelbar-5']/div/ul/li[2]/div/a[@innertext='NACHRICHTEN']"
-				addcaps="unknown,webelement,atag"
-				refimgid="6512ca14-a7eb-40eb-8da9-63d31baf7cd5">
-					/dom[@domain=$varUrl]//div[#'panelbar-5']/?/?/ul//a[@innertext='NACHRICHTEN']
-				</item>
-				<item
-				name="Posteingang"
-				id="71b73f96-1135-441f-a3bd-8cfc83fe4f6c"
-				searchtimeout="30000ms"
-				capname="atag"
-				refpath="/dom[@domain='onweb.bns-software.com']//div[#'panelbar-5']/div/ul/li[2]/ul/li[1]/div/a[@innertext='Posteingang']"
-				addcaps="unknown,webelement,atag"
-				refimgid="312bfacd-18d2-45b0-ae10-e39f9a4ec835">
-					/dom[@domain=$varUrl]//div[#'panelbar-5']/?/?/ul/?/?/ul//a[@innertext='Posteingang']
-				</item>
-				<item
-				name="NewMail"
-				id="b87b9eaf-231e-4297-8f11-cb27a495aeb2"
-				searchtimeout="30000ms"
-				capname="spantag"
-				refpath="/dom[@domain='onweb.bns-software.com']//div[#'MainAreaTabStrip-1']/div/div[1]/div[2]/span[2]/button/span"
-				addcaps="unknown,webelement,spantag"
-				refimgid="ce2f73b9-813d-44e2-94ae-9f87d0f638c5">
-					/dom[@domain=$varUrl]//div[#'MainAreaTabStrip-1']/div/div[1]/div[2]/span[2]/button[@title='Neue Nachricht']/span
-				</item>
-				<item
-				name="Content"
-				id="1e43a4ae-b88b-472e-a18f-c2f140395bf1"
-				searchtimeout="30000ms"
-				capname="textareatag"
-				refpath="/dom[@domain='onweb.bns-software.com']//textarea[#'Content']"
-				addcaps="unknown,webelement,textareatag"
-				refimgid="0f9b6791-7ed9-4533-bc1f-62b8cabde33d">
-					/dom[@domain=$varUrl]//textarea[#'Content']
-				</item>
-				<item
-				name="Postausgang"
-				id="399c9b0b-fa76-4619-9147-ffeff48b7d4d"
-				searchtimeout="30000ms"
-				capname="atag"
-				refpath="/dom[@domain='onweb.bns-software.com']//div[#'panelbar-5']/div/ul/li[2]/ul/li[2]/div/a[@innertext='Postausgang']"
-				addcaps="unknown,webelement,atag"
-				refimgid="02a17572-3871-4647-91ec-0c6bdff431d3">
-					/dom[@domain=$varUrl]//div[#'panelbar-5']/?/?/ul/?/?/ul//a[@innertext='Postausgang']
-				</item>
-				<item
-				name="NewMail1"
-				id="c695f58f-70e3-431a-83e8-48d1dbc6f3c4"
-				searchtimeout="30000ms"
-				capname="spantag"
-				refpath="/dom[@domain='onweb.bns-software.com']//div[#'MainAreaTabStrip-2']/div/div[1]/div[2]/span[2]/button/span"
-				addcaps="unknown,webelement,spantag"
-				refimgid="e9f3afcb-2bec-427a-a22c-e1da839c24bf">
-					/dom[@domain=$varUrl]//div[#'MainAreaTabStrip-2']/div/div[1]/div[2]/span[2]/button[@title='Neue Nachricht']/span
-				</item>
-				<item
-				name="Nachrichtenverlauf"
-				id="7002ebdb-cd42-45de-86a6-cfb0456b04bf"
-				searchtimeout="30000ms"
-				capname="atag"
-				refpath="/dom[@domain='onweb.bns-software.com']//div[#'panelbar-5']/div/ul/li[2]/ul/li[3]/div/a[@innertext='Nachrichtenverlauf']"
-				addcaps="unknown,webelement,atag"
-				refimgid="03e919ae-ad20-4858-be6e-f5eb038f2a48">
-					/dom[@domain=$varUrl]//div[#'panelbar-5']/?/?/ul/?/?/ul//a[@innertext='Nachrichtenverlauf']
-				</item>
-				<item
-				name="NeueNachricht"
-				id="cf21d1e8-f535-4400-984f-126dd5588dc0"
-				searchtimeout="30000ms"
-				capname="buttontag"
-				refpath="/dom[@domain='onweb.bns-software.com']//div[#'MainAreaTabStrip-3']/div/div[1]/div[2]/span[1]/button[@title='Neue Nachricht']"
-				addcaps="unknown,webelement,buttontag"
-				refimgid="f361bd4c-22d5-4b8c-a96d-cc627b4679d3">
-					/dom[@domain=$varUrl]//div[#'MainAreaTabStrip-3']/div/div[1]/div[2]/?/?/button[@title='Neue Nachricht']
-				</item>
-				<item
-				name="TOUREN"
-				id="e9fbabbd-3241-42bf-82a6-00bf5f7a6528"
-				searchtimeout="30000ms"
-				capname="atag"
-				refpath="/dom[@domain='onweb.bns-software.com']//div[#'panelbar-5']/div/ul/li[3]/div/a[@innertext='TOUREN']"
-				addcaps="unknown,webelement,atag"
-				refimgid="bcb16e61-de53-4b60-bb63-0c8967421292">
-					/dom[@domain=$varUrl]//div[#'panelbar-5']/?/?/ul//a[@innertext='TOUREN']
-				</item>
-				<item
-				name="TourunternehmenKalkulation"
-				id="5d9d6adc-167f-4713-8c45-4a3d55152cba"
-				searchtimeout="30000ms"
-				capname="atag"
-				refpath="/dom[@domain='onweb.bns-software.com']//div[#'panelbar-5']/div/ul/li[3]/ul/li[1]/div/a[@innertext~'^Tourunternehmen\ Kalkulati']"
-				addcaps="unknown,webelement,atag"
-				refimgid="0050dc3d-fce3-4cf5-bf7d-413e9895766d">
-					/dom[@domain=$varUrl]//div[#'panelbar-5']/?/?/ul/li[3]/ul//a[@innertext~'^Tourunternehmen\ Kalkulati']
-				</item>
-				<item
-				name="Volumen1"
-				id="ba1024f9-560c-4471-b0c6-ac76ea7967be"
-				searchtimeout="30000ms"
-				capname="inputtag"
-				refpath="/dom[@domain='onweb.bns-software.com']//input[#'Volumen']"
-				addcaps="unknown,webelement,inputtag"
-				refimgid="7635ccd2-3555-437a-9603-f49158bb3185">
-					/dom[@domain=$varUrl]//input[#'Volumen']
-				</item>
-				<item
-				name="TourVolumen"
-				id="df8d34c7-f931-4662-8527-121519646618"
-				searchtimeout="30000ms"
-				capname="inputtag"
-				refpath="/dom[@domain='onweb.bns-software.com']//input[#'TourVolumen']"
-				addcaps="unknown,webelement,inputtag"
-				refimgid="93a28261-99b6-4ab6-90bf-6845889a8c3c">
-					/dom[@domain=$varUrl]//input[#'TourVolumen']
-				</item>
-				<item
-				name="Kalkulation"
-				id="82bf09e8-ba8a-4afb-9c46-76c0180fb149"
-				searchtimeout="30000ms"
 				capname="spantag"
 				addcaps="unknown,webelement,spantag"
-				refimgid="d7bcfb95-2444-4f0f-9dfd-1d08cdd4836b">
-					/dom[@domain=$varUrl]//li/span[@innertext='Kalkulation']
+				refimgid="e594772b-6271-462e-bbb7-b3b7fb2e3872">
+					/dom[@domain=$varUrl]//div[#'LoginPanel']/div[pos()=2]/div[pos()=1]/span[pos()=0]/span[pos()=0]/span[pos()=1]/span[@innertext='select']
 				</item>
 				<item
-				name="TourLademeter"
-				id="0b74ed42-d70f-4110-b1e3-ba530d1f2652"
-				searchtimeout="30000ms"
-				capname="inputtag"
-				addcaps="unknown,webelement,inputtag"
-				refimgid="1732eb8d-6447-4629-bb90-019bc1465495">
-					/dom[@domain=$varUrl]//table/tbody/tr[3]/td[5]/table//input[@id='TourLademeter']
-				</item>
-				<item
-				name="Touren1"
-				id="0f7ebf45-ae6f-43f6-a519-79756106383e"
-				searchtimeout="30000ms"
-				capname="atag"
-				refpath="/dom[@domain='onweb.bns-software.com' and @caption='BNS WEBSUITE - Admin' and @page='' and @path='/' and @browsername='Chrome' and @pageurl='http://onweb.bns-software.com/#']//div[#'panelbar-5']/div/ul/li[3]/ul/li[2]/div/a[@innertext='Touren']"
-				addcaps="unknown,webelement,atag"
-				refimgid="7278f07d-065e-45a5-a0ab-5e480b13bbf8">
-					/dom[@domain=$varUrl]//div[#'panelbar-5']/?/?/ul/li[3]/ul//a[@innertext='Touren']
-				</item>
-				<item
-				name="KostenBewertung"
-				id="1ac03aa1-e274-4008-9674-9789ea0f450e"
-				searchtimeout="30000ms"
+				name="Mandant1"
+				id="d229164c-d841-4db8-89f6-890b5782fa32"
+				searchtimeout="5000ms"
 				capname="spantag"
 				addcaps="unknown,webelement,spantag"
-				refimgid="fb9aa8f1-3be7-4642-9817-b909aee84565">
-					/dom[@domain=$varUrl]//div/table/tbody/tr[14]//ul/li[4]/span[@innertext='Kosten &amp; Bewertung']
+				refimgid="e75eede5-47ca-4961-8e3f-606a4d0c0c05">
+					/dom[@domain=$varUrl]//div[#'LoginPanel']/div[pos()=2]/div[pos()=1]/span[@title='']/span[pos()=0]/span
 				</item>
 				<item
-				name="TourErtrag"
-				id="98956d5f-cd85-4fdc-9a56-8d1f8c0b2cec"
-				searchtimeout="30000ms"
+				name="SalutationInput"
+				id="77abbb49-b718-4644-85fe-7e7ef0ac6ce6"
+				searchtimeout="5000ms"
 				capname="inputtag"
-				refpath="/dom[@domain='onweb.bns-software.com' and @caption='BNS WEBSUITE - Admin' and @page='' and @path='/' and @browsername='Chrome' and @pageurl='http://onweb.bns-software.com/#']//input[#'TourErtrag']"
 				addcaps="unknown,webelement,inputtag"
-				refimgid="389b1380-9083-4e94-ae80-f451826f4719">
-					/dom[@domain=$varUrl]//input[#'TourErtrag']
+				refimgid="21615b3f-9fe3-48a7-98be-10b00c4252ac">
+					/dom[@domain=$varUrl]//?/div[pos()=1]/table[pos()=0]/tbody[pos()=0]/tr[pos()=1]/td[pos()=0]/table[pos()=0]/tbody[pos()=0]/tr[pos()=0]/td[pos()=1]/div[pos()=0]/span[pos()=0]/span[pos()=0]/input[@name='Salutation_input' and @type='text']
 				</item>
 				<item
-				name="STAMMDATEN"
-				id="849de1f1-5539-4ef2-bf2e-bccc44a1a31b"
-				searchtimeout="30000ms"
+				name="AriaActiveCell"
+				id="dfd2ce92-317a-41e9-a298-9efaf596d6a5"
+				searchtimeout="5000ms"
+				capname="tdtag"
+				refpath="/dom[@domain='prerelease.bns.local']//td[#'aria_active_cell']"
+				addcaps="unknown,webelement,tdtag"
+				refimgid="74191c5d-f745-4fc9-8910-13e14f5c3da7">
+					/dom[@domain=$varUrl]//td[#'aria_active_cell']
+				</item>
+				<item
+				name="Adressen1prer"
+				id="c7285e0f-8a1a-42ec-ab0e-47649b3ebfd3"
+				searchtimeout="5000ms"
 				capname="atag"
-				refpath="/dom[1]//div[#'panelbar-5']/div/ul/li[5]/div/a[@innertext='STAMMDATEN']"
+				refpath="/dom[@domain='prerelease.bns.local']//div[#'panelbar-1']/div/ul/li[6]/ul/li[4]/div/a[@innertext='Adressen']"
 				addcaps="unknown,webelement,atag"
-				refimgid="e4058cb7-b704-4065-be5c-468eb3af2c37">
-					/dom[@domain=$varUrl]//div[#'panelbar-5']/?/?/ul//a[@innertext='STAMMDATEN']
+				refimgid="d0083396-43b1-42ee-be86-4a98a0518268">
+					/dom[@domain=$varUrl]//div[#'panelbar-1']/div[pos()=0]/ul[pos()=0]/li[pos()=5]/ul[pos()=1]/li[pos()=3]/div[pos()=0]/a[@innertext='Adressen' and @href='javascript:void(0);']
+				</item>
+				<item
+				name="Branchen"
+				id="49395386-463e-4888-90a0-0dde967c4c2a"
+				searchtimeout="5000ms"
+				capname="spantag"
+				refpath="/dom[@domain='prerelease.bns.local']//div[#'MainAreaTabStrip-1']/div/div[1]/div[1]/span[1]/div/span/span/span[@innertext='Branchen']"
+				addcaps="unknown,webelement,spantag"
+				refimgid="87661708-4318-4b15-85d2-67f360eda9a0">
+					/dom[@domain=$varUrl]//div[#'MainAreaTabStrip-1']/div[pos()=0]/div[pos()=0]/div[pos()=0]/span[pos()=0]/div[pos()=0]/span[pos()=0]/span[pos()=0]/span[@innertext='Branchen']
+				</item>
+				<item
+				name="KIconKICustom1"
+				id="f690bb71-e746-40bf-a4b8-02e88d685ac1"
+				searchtimeout="5000ms"
+				capname="spantag"
+				addcaps="unknown,webelement,spantag"
+				refimgid="96cde6a7-e3de-48d2-914d-992655113347">
+					/dom[@domain=$varUrl]//div[#'MainAreaTabStrip-1']/div[pos()=0]/div[pos()=0]/div[pos()=1]/span[pos()=1]/a/span[pos()=0]
+				</item>
+				<item
+				name="CloseTabPreR"
+				id="c2e08164-6bb2-4618-85e9-a7b2910443fd"
+				searchtimeout="5000ms"
+				capname="imgtag"
+				addcaps="unknown,webelement,imgtag"
+				refimgid="8d2468f0-cbd3-460f-b59d-6ae9d4f682c2">
+					/dom[@domain=$varUrl]//div[#'MainAreaTabStrip']/span[pos()=1]//img[@class='closeTab']
+				</item>
+				<item
+				name="HttpPrereleaseBnsLocalContentImag"
+				id="98390bc1-6def-4e5f-8858-11fdb69b6201"
+				searchtimeout="5000ms"
+				capname="imgtag"
+				addcaps="unknown,webelement,imgtag"
+				refimgid="791c5e16-7751-4be5-81bf-5be8504b0b7f">
+					/dom[@domain=$varUrl]//li[#'MainAreaTabStripe']/span[pos()=1]/img[@class='closeTab']
+				</item>
+				<item
+				name="DlleistungsdatumPreR"
+				id="e1a9432d-8de2-496d-b0ff-ef1eded89a63"
+				searchtimeout="5000ms"
+				capname="inputtag"
+				addcaps="unknown,webelement,inputtag"
+				refimgid="56a5435b-c194-42d4-b976-02d81732b963">
+					/dom[@domain=$varUrl]//div[pos()=1]/table[pos()=0]/tbody[pos()=0]/tr[pos()=6]/td[pos()=0]/table[pos()=0]/tbody[pos()=0]/tr[pos()=0]/td[pos()=1]/div[pos()=0]/span[pos()=0]/span[pos()=0]/input[@name='Dlleistungsdatum' and @type='text']
+				</item>
+				<item
+				name="NumberEntriesPreR"
+				id="42bfa6f3-4b6b-4ae1-b744-268dd7bb5d3a"
+				searchtimeout="5000ms"
+				capname="inputtag"
+				addcaps="unknown,webelement,inputtag"
+				refimgid="cf355139-9fd5-4f36-9e84-fd14e63ef4ad">
+					/dom[@domain=$varUrl]//div/table[pos()=0]/tbody[pos()=0]/tr[pos()=1]/td[pos()=0]/table[pos()=0]/tbody[pos()=0]/tr[pos()=0]/td[pos()=1]/div[pos()=0]/div[pos()=0]/div[pos()=2]/div[pos()=0]/span[pos()=1]/span[pos()=0]/span[pos()=0]/input[@type='text' and @value='25']
+				</item>
+				<item
+				name="PortalnutzerPreR"
+				id="7b7ba5f5-78b8-4582-b903-b1ef5959c344"
+				searchtimeout="5000ms"
+				capname="atag"
+				refpath="/dom[@domain='prerelease.bns.local']//div[#'panelbar-3']/div/ul/li[3]/ul/li[2]/div/a[@innertext='Portalnutzer']"
+				addcaps="unknown,webelement,atag"
+				refimgid="5c2f2ef2-37f6-4c8f-9fae-9b7f10ec5eb8">
+					/dom[@domain=$varUrl]//div[#'panelbar-3']/div[pos()=0]/ul[pos()=0]/li[pos()=2]/ul[pos()=1]/li[pos()=1]/div[pos()=0]/a[@innertext='Portalnutzer' and @href='javascript:void(0);']
+				</item>
+				<item
+				name="PortalInputPreR"
+				id="66d1c019-d0dc-4db5-afe6-6c498b002c64"
+				searchtimeout="5000ms"
+				capname="inputtag"
+				addcaps="unknown,webelement,inputtag"
+				refimgid="28fdcd10-9235-43c9-ab40-2c8c6e028293">
+					/dom[@domain=$varUrl]//?/div[pos()=1]/table[pos()=0]/tbody[pos()=0]/tr[pos()=1]/td[pos()=0]/table[pos()=0]/tbody[pos()=0]/tr[pos()=0]/td[pos()=1]/div[pos()=0]/span[pos()=0]/span[pos()=0]/input[@name='Portal_input' and @type='text']
+				</item>
+				<item
+				name="OptionTag15HESDepot"
+				id="e3f957a4-845c-4457-95fe-f84d46684564"
+				searchtimeout="5000ms"
+				capname="optiontag"
+				refpath="/dom[@domain='prerelease.bns.local']//select[#'Categories']/option[@value='15HES-Depot']"
+				addcaps="unknown,webelement,optiontag"
+				refimgid="847ca70c-26e7-43fb-aab8-3fb08229cce8">
+					/dom[@domain=$varUrl]//select[#'Categories']/option[@value='15HES-Depot' and @innertext='HES-Depot']
+				</item>
+				<item
+				name="BeschreibungDinPreR"
+				id="bebc7199-fdec-41a1-82d5-77ca3203db5c"
+				searchtimeout="5000ms"
+				capname="inputtag"
+				refpath="/dom[@domain='prerelease.bns.local']//div[#'MainAreaTabStrip-1']/div/div[2]/div/div[1]/div[4]/div[1]/table/tbody/tr[1]/td[1]/input[@name='Beschreibung']"
+				addcaps="unknown,webelement,inputtag"
+				refimgid="ccda4979-a493-42c7-8168-8e7a28888f77">
+					/dom[@domain=$varUrl]//div[#'MainAreaTabStrip-1']/div[pos()=0]/div[pos()=1]/div[pos()=0]/div[pos()=0]/div[pos()=5]/div[pos()=0]/table[pos()=0]/tbody[pos()=1]/tr[pos()=0]/td[pos()=0]/input[@name='Beschreibung' and @type='text']
 				</item>
 				<item
 				name="Fahrzeuge2"
-				id="32cbac87-7e13-4a7e-929a-191910ec5afd"
-				searchtimeout="30000ms"
+				id="2cda081a-51d5-4311-a95f-37d4c4ab250a"
+				searchtimeout="5000ms"
 				capname="atag"
-				refpath="/dom[1]//div[#'panelbar-5']/div/ul/li[5]/ul/li[1]/div/a[@innertext='Fahrzeuge']"
+				refpath="/dom[@domain='prerelease.bns.local']//div[#'panelbar-4']/div/ul/li[6]/ul/li[1]/ul/li[2]/div/a[@innertext='Fahrzeuge']"
 				addcaps="unknown,webelement,atag"
-				refimgid="c44d1e40-57d7-408b-890f-81e150c75b45">
-					/dom[@domain=$varUrl]//div[#'panelbar-5']/?/?/ul/li[5]/ul//a[@innertext='Fahrzeuge']
+				refimgid="ba75fb7e-56ca-4dff-b307-e773473f3591">
+					/dom[@domain=$varUrl]//div[#'panelbar-4']/div[pos()=0]/ul[pos()=0]/li[pos()=5]/ul[pos()=1]/li[pos()=0]/ul[pos()=1]/li[pos()=1]/div[pos()=0]/a[@innertext='Fahrzeuge' and @href='javascript:void(0);']
 				</item>
 				<item
-				name="Fzterminueberwachung"
-				id="c43acff1-40fc-4b80-a758-8f69bc6e40d8"
-				searchtimeout="30000ms"
-				capname="inputtag"
-				refpath="/dom[@domain='onweb.bns-software.com' and @caption='BNS WEBSUITE - Admin' and @page='' and @path='/' and @browsername='Chrome' and @pageurl='http://onweb.bns-software.com/#']//input[#'Fzterminueberwachung']"
-				addcaps="unknown,webelement,inputtag"
-				refimgid="964aa453-fa21-4a1a-80fb-3ba9e2da92aa">
-					/dom[@domain=$varUrl]//input[#'Fzterminueberwachung']
-				</item>
-				<item
-				name="Endgeraete"
-				id="54492a92-4253-4534-b3ca-d44448f4aa80"
-				searchtimeout="30000ms"
+				name="FAhrzKonfigurationPreR"
+				id="dc3beeff-840f-42b9-abc0-60034fdacc11"
+				searchtimeout="5000ms"
 				capname="atag"
-				refpath="/dom[@domain='onweb.bns-software.com' and @caption='BNS WEBSUITE - Admin' and @page='' and @path='/' and @browsername='Chrome' and @pageurl='http://onweb.bns-software.com/#']//div[#'panelbar-5']/div/ul/li[5]/ul/li[2]/div/a[@innertext='Endgeräte']"
+				refpath="/dom[@domain='prerelease.bns.local']//div[#'panelbar-4']/div/ul/li[6]/ul/li[1]/ul/li[1]/div/a[@innertext='Konfiguration']"
 				addcaps="unknown,webelement,atag"
-				refimgid="78da45ab-f054-4b80-bf40-c5b8b6e08973">
-					/dom[@domain=$varUrl]//div[#'panelbar-5']/?/?/ul/li[5]/ul//a[@innertext='Endger&#228;te']
+				refimgid="6a7c132d-bea4-4b13-b1da-ab4109ddd73c">
+					/dom[@domain=$varUrl]//div[#'panelbar-4']/div[pos()=0]/ul[pos()=0]/li[pos()=5]/ul[pos()=1]/li[pos()=0]/ul[pos()=1]/li[pos()=0]/div[pos()=0]/a[@innertext='Konfiguration' and @href='javascript:void(0);']
 				</item>
 				<item
-				name="InputTagPUK"
-				id="c007b67d-6a39-479b-9aba-03fa22703e6c"
-				searchtimeout="30000ms"
-				capname="inputtag"
-				refpath="/dom[@domain='onweb.bns-software.com' and @caption='BNS WEBSUITE - Admin' and @page='' and @path='/' and @browsername='Chrome' and @pageurl='http://onweb.bns-software.com/#']//input[#'PUK']"
-				addcaps="unknown,webelement,inputtag"
-				refimgid="edd63a99-8daa-4567-844e-96b8526b4dad">
-					/dom[@domain=$varUrl]//input[#'PUK']
-				</item>
-				<item
-				name="FAHRERRECHTE"
-				id="46c0534d-b57a-4a09-b9af-1c2fda482268"
-				searchtimeout="30000ms"
+				name="FuhrparkequipmentPreR"
+				id="b2a9ca31-05b9-4d46-9e64-402f78b845e3"
+				searchtimeout="5000ms"
 				capname="atag"
-				refpath="/dom[@domain='onweb.bns-software.com' and @caption='BNS WEBSUITE - Admin' and @page='' and @path='/' and @browsername='Chrome' and @pageurl='http://onweb.bns-software.com/#']//div[#'panelbar-5']/div/ul/li[5]/ul/li[3]/div/a[@innertext='FAHRER &amp; RECHTE']"
+				refpath="/dom[@domain='prerelease.bns.local']//div[#'panelbar-4']/div/ul/li[6]/ul/li[3]/ul/li[5]/div/a[@innertext='Fuhrparkequipment']"
 				addcaps="unknown,webelement,atag"
-				refimgid="2f004a16-0fc6-4b32-94a7-14abf49e107f">
-					/dom[@domain=$varUrl]//div[#'panelbar-5']/?/?/ul/li[5]/ul//a[@innertext='FAHRER &amp; RECHTE']
+				refimgid="8d06836f-a4db-4ea1-998c-408f780e3a77">
+					/dom[@domain=$varUrl]//div[#'panelbar-4']/div[pos()=0]/ul[pos()=0]/li[pos()=5]/ul[pos()=1]/li[pos()=2]/ul[pos()=1]/li[pos()=4]/div[pos()=0]/a[@innertext='Fuhrparkequipment' and @href='javascript:void(0);']
 				</item>
 				<item
-				name="Fahrer"
-				id="556adacc-22ca-49ce-bd7e-940c3d2b8ffd"
-				searchtimeout="30000ms"
+				name="FuhrparkequipmenttypenPreR"
+				id="d9fcf55e-8dcb-46bb-a06f-fbf93ba40b56"
+				searchtimeout="5000ms"
 				capname="atag"
-				refpath="/dom[@domain='onweb.bns-software.com' and @caption='BNS WEBSUITE - Admin' and @page='' and @path='/' and @browsername='Chrome' and @pageurl='http://onweb.bns-software.com/#']//div[#'panelbar-5']/div/ul/li[5]/ul/li[3]/ul/li[1]/div/a[@innertext='Fahrer']"
+				refpath="/dom[1]//div[#'panelbar-4']/div/ul/li[6]/ul/li[3]/ul/li[6]/div/a[@innertext='Fuhrparkequipmenttypen']"
 				addcaps="unknown,webelement,atag"
-				refimgid="14521357-464b-4cf9-b8fd-164879ccd2e4">
-					/dom[@domain=$varUrl]//div[#'panelbar-5']/?/?/ul/li[5]/ul/?/?/ul//a[@innertext='Fahrer']
+				refimgid="71300e01-aac0-4243-8283-2914c11203fc">
+					/dom[@domain=$varUrl]//div[#'panelbar-4']/div[pos()=0]/ul[pos()=0]/li[pos()=5]/ul[pos()=1]/li[pos()=2]/ul[pos()=1]/li[pos()=5]/div[pos()=0]/a[@innertext='Fuhrparkequipmenttypen' and @href='javascript:void(0);']
 				</item>
 				<item
-				name="KIconKAdd10"
-				id="20ffc3b1-cd31-4ad4-85e9-af784fc15b46"
-				searchtimeout="30000ms"
-				capname="spantag"
-				addcaps="unknown,webelement,spantag"
-				refimgid="00d13301-98c3-4f41-8786-5a111942c5f6">
-					/dom[@domain=$varUrl]//div[#'MainAreaTabStrip-1']/div/div[1]/div[2]/span[2]/a[2]/span
-				</item>
-				<item
-				name="Text8"
-				id="d319f677-4a88-4826-a0aa-afe7486f5f9c"
-				searchtimeout="30000ms"
+				name="Geaendertwann"
+				id="e7536111-93de-4616-b7e0-8a7acc44f55d"
+				searchtimeout="5000ms"
 				capname="inputtag"
 				addcaps="unknown,webelement,inputtag"
-				refimgid="0975472e-0162-416f-8643-5b3a2d771bbf">
-					/dom[@domain=$varUrl]//?/?/?/table/tbody/tr[10]/td[3]/table//div//input
+				refimgid="93d44916-ef89-48ca-8664-a3694b744051">
+					/dom[@domain=$varUrl]//?/div[pos()=1]/table[pos()=0]/tbody[pos()=0]/tr[pos()=2]/td[pos()=0]/table[pos()=0]/tbody[pos()=0]/tr[pos()=0]/td[pos()=1]/div[pos()=0]/input[@name='Geaendertwann' and @type='text']
 				</item>
 				<item
-				name="Ereignis"
-				id="bfb90de2-61c2-4aab-b271-a567f861b5c7"
-				searchtimeout="30000ms"
+				name="HerstellerPreR"
+				id="2b417a14-7aea-4bde-a245-bd79b5dce6ec"
+				searchtimeout="5000ms"
+				capname="atag"
+				refpath="/dom[@domain='prerelease.bns.local']//div[#'panelbar-4']/div/ul/li[6]/ul/li[3]/ul/li[7]/div/a[@innertext='Hersteller']"
+				addcaps="unknown,webelement,atag"
+				refimgid="6fee98c8-0474-46f5-859e-0e6f33d42c3f">
+					/dom[@domain=$varUrl]//div[#'panelbar-4']/div[pos()=0]/ul[pos()=0]/li[pos()=5]/ul[pos()=1]/li[pos()=2]/ul[pos()=1]/li[pos()=6]/div[pos()=0]/a[@innertext='Hersteller' and @href='javascript:void(0);']
+				</item>
+				<item
+				name="LadungstypenPreR"
+				id="b5e7a4ee-4a0c-443b-9f49-2fb30d73d7b6"
+				searchtimeout="5000ms"
+				capname="atag"
+				refpath="/dom[@domain='prerelease.bns.local']//div[#'panelbar-4']/div/ul/li[6]/ul/li[3]/ul/li[8]/div/a[@innertext='Ladungstypen']"
+				addcaps="unknown,webelement,atag"
+				refimgid="d4811350-90c4-4312-a119-4ef236676b39">
+					/dom[@domain=$varUrl]//div[#'panelbar-4']/div[pos()=0]/ul[pos()=0]/li[pos()=5]/ul[pos()=1]/li[pos()=2]/ul[pos()=1]/li[pos()=7]/div[pos()=0]/a[@innertext='Ladungstypen' and @href='javascript:void(0);']
+				</item>
+				<item
+				name="OElsortenPreR"
+				id="66ddf2a4-be8f-4bd2-811f-92fa0284e5b2"
+				searchtimeout="5000ms"
+				capname="atag"
+				refpath="/dom[@domain='prerelease.bns.local']//div[#'panelbar-4']/div/ul/li[6]/ul/li[3]/ul/li[9]/div/a[@innertext='Ölsorten']"
+				addcaps="unknown,webelement,atag"
+				refimgid="b86915ad-94b9-40d0-ad39-755b166d9ca9">
+					/dom[@domain=$varUrl]//div[#'panelbar-4']/div[pos()=0]/ul[pos()=0]/li[pos()=5]/ul[pos()=1]/li[pos()=2]/ul[pos()=1]/li[pos()=8]/div[pos()=0]/a[@innertext='&#214;lsorten' and @href='javascript:void(0);']
+				</item>
+				<item
+				name="ReparaturgruppenPreR"
+				id="92407914-fb33-461f-8bf9-e30585befde0"
+				searchtimeout="5000ms"
+				capname="atag"
+				refpath="/dom[@domain='prerelease.bns.local']//div[#'panelbar-4']/div/ul/li[6]/ul/li[3]/ul/li[10]/div/a[@innertext='Reparaturgruppen']"
+				addcaps="unknown,webelement,atag"
+				refimgid="7d2eedb3-99c8-4bb0-8a38-079bdba71335">
+					/dom[@domain=$varUrl]//div[#'panelbar-4']/div[pos()=0]/ul[pos()=0]/li[pos()=5]/ul[pos()=1]/li[pos()=2]/ul[pos()=1]/li[pos()=9]/div[pos()=0]/a[@innertext='Reparaturgruppen' and @href='javascript:void(0);']
+				</item>
+				<item
+				name="ReparaturkoepfePreR"
+				id="aade8242-29eb-48e4-b473-2ae9b7cfd8a5"
+				searchtimeout="5000ms"
+				capname="atag"
+				refpath="/dom[@domain='prerelease.bns.local']//div[#'panelbar-4']/div/ul/li[6]/ul/li[3]/ul/li[11]/div/a[@innertext='Reparaturköpfe']"
+				addcaps="unknown,webelement,atag"
+				refimgid="db0f0935-0f51-4275-b828-b818fbf0d13f">
+					/dom[@domain=$varUrl]//div[#'panelbar-4']/div[pos()=0]/ul[pos()=0]/li[pos()=5]/ul[pos()=1]/li[pos()=2]/ul[pos()=1]/li[pos()=10]/div[pos()=0]/a[@innertext='Reparaturk&#246;pfe' and @href='javascript:void(0);']
+				</item>
+				<item
+				name="SynthetikInputPreR"
+				id="b58e8d9d-5a67-4e8f-b34b-e4f1fb9ce8c1"
+				searchtimeout="5000ms"
 				capname="inputtag"
 				addcaps="unknown,webelement,inputtag"
-				refimgid="56c71f85-2efc-4535-bc4c-b908e1da5d33">
-					/dom[@domain=$varUrl]//div/table/tbody/tr[5]/td[1]/table/tbody/tr/td[2]/div/span/span/input
+				refimgid="b56ae7ed-ae51-4207-9401-a11dd22d9198">
+					/dom[@domain=$varUrl]//?/div[pos()=1]/table[pos()=0]/tbody[pos()=0]/tr[pos()=3]/td[pos()=0]/table[pos()=0]/tbody[pos()=0]/tr[pos()=0]/td[pos()=1]/div[pos()=0]/span[pos()=0]/span[pos()=0]/input[@name='Synthetik_input' and @type='text' and @value='Mineral&#246;l']
 				</item>
 				<item
-				name="MainAreaTabStripTsActive"
-				id="909b41a4-97fd-4178-bd1a-bf541798b6e7"
-				searchtimeout="30000ms"
+				name="KartenverwaltungPreR"
+				id="9e25eee4-006c-4fb9-91b8-0236b48d0750"
+				searchtimeout="5000ms"
+				capname="atag"
+				refpath="/dom[@domain='prerelease.bns.local']//div[#'panelbar-4']/div/ul/li[6]/ul/li[5]/ul/li[2]/div/a[@innertext='Kartenverwaltung']"
+				addcaps="unknown,webelement,atag"
+				refimgid="a5ca7ae8-4ce8-41c5-9f90-899d3973eaf2">
+					/dom[@domain=$varUrl]//div[#'panelbar-4']/div[pos()=0]/ul[pos()=0]/li[pos()=5]/ul[pos()=1]/li[pos()=4]/ul[pos()=1]/li[pos()=1]/div[pos()=0]/a[@innertext='Kartenverwaltung' and @href='javascript:void(0);']
+				</item>
+				<item
+				name="KartenKonfigurationPreR"
+				id="8bb87875-7152-44b6-ad6f-9af0d89bc1f6"
+				searchtimeout="5000ms"
+				capname="atag"
+				refpath="/dom[@domain='prerelease.bns.local']//div[#'panelbar-4']/div/ul/li[6]/ul/li[5]/ul/li[1]/div/a[@innertext='Konfiguration']"
+				addcaps="unknown,webelement,atag"
+				refimgid="0a7bc93f-0f74-4625-941e-79168398cc6f">
+					/dom[@domain=$varUrl]//div[#'panelbar-4']/div[pos()=0]/ul[pos()=0]/li[pos()=5]/ul[pos()=1]/li[pos()=4]/ul[pos()=1]/li[pos()=0]/div[pos()=0]/a[@innertext='Konfiguration' and @href='javascript:void(0);']
+				</item>
+				<item
+				name="ScannerstammPreR"
+				id="a3e90e05-7080-448c-9fd8-7a1698615551"
+				searchtimeout="5000ms"
+				capname="atag"
+				refpath="/dom[@domain='prerelease.bns.local']//div[#'panelbar-4']/div/ul/li[6]/ul/li[6]/ul/li[3]/div/a[@innertext='Scannerstamm']"
+				addcaps="unknown,webelement,atag"
+				refimgid="96fc5f72-7d90-4015-8e3a-37cfb02d5f1d">
+					/dom[@domain=$varUrl]//div[#'panelbar-4']/div[pos()=0]/ul[pos()=0]/li[pos()=5]/ul[pos()=1]/li[pos()=5]/ul[pos()=1]/li[pos()=2]/div[pos()=0]/a[@innertext='Scannerstamm' and @href='javascript:void(0);']
+				</item>
+				<item
+				name="LagerKonfigurationPreR"
+				id="6642d847-5f28-4df7-8b0e-1ca854931dc5"
+				searchtimeout="5000ms"
+				capname="atag"
+				refpath="/dom[@domain='prerelease.bns.local']//div[#'panelbar-4']/div/ul/li[6]/ul/li[6]/ul/li[1]/div/a[@innertext='Konfiguration']"
+				addcaps="unknown,webelement,atag"
+				refimgid="29223037-73a6-4619-8cff-ac7c8dbb440d">
+					/dom[@domain=$varUrl]//div[#'panelbar-4']/div[pos()=0]/ul[pos()=0]/li[pos()=5]/ul[pos()=1]/li[pos()=5]/ul[pos()=1]/li[pos()=0]/div[pos()=0]/a[@innertext='Konfiguration' and @href='javascript:void(0);']
+				</item>
+				<item
+				name="KilometesatzPreR"
+				id="79d61165-d28b-416b-bd9e-a9a8b8a24fbf"
+				searchtimeout="5000ms"
+				capname="inputtag"
+				addcaps="unknown,webelement,inputtag"
+				refimgid="3a87cf5d-c8bd-42f6-a53f-3d9f71bbf1bb">
+					/dom[@domain=$varUrl]//?/div[pos()=1]/table[pos()=0]/tbody[pos()=0]/tr[pos()=6]/td[pos()=0]/table[pos()=0]/tbody[pos()=0]/tr[pos()=0]/td[pos()=1]/div[pos()=0]/span[pos()=0]/span[pos()=0]/input[@type='text' and @value='0,000']
+				</item>
+				<item
+				name="IsolkzInputPreR"
+				id="367712c6-ac5b-47cb-8937-fa4c638c1448"
+				searchtimeout="5000ms"
+				capname="inputtag"
+				addcaps="unknown,webelement,inputtag"
+				refimgid="09692cee-544e-433f-a1b4-5f9150902e25">
+					/dom[@domain=$varUrl]//?/div[pos()=1]/table[pos()=0]/tbody[pos()=0]/tr[pos()=2]/td[pos()=0]/table[pos()=0]/tbody[pos()=0]/tr[pos()=0]/td[pos()=1]/div[pos()=0]/span[pos()=0]/span[pos()=0]/input[@name='Isolkz_input' and @type='text']
+				</item>
+				<item
+				name="QMKategorienPreR"
+				id="c2db2fec-874a-4b24-a93d-5157a3c2a6ff"
+				searchtimeout="5000ms"
+				capname="atag"
+				refpath="/dom[@domain='prerelease.bns.local']//div[#'panelbar-4']/div/ul/li[6]/ul/li[8]/ul/li[2]/div/a[@innertext='QM Kategorien']"
+				addcaps="unknown,webelement,atag"
+				refimgid="732c2d1b-01b8-43f3-a386-098ba0c9c56f">
+					/dom[@domain=$varUrl]//div[#'panelbar-4']/div[pos()=0]/ul[pos()=0]/li[pos()=5]/ul[pos()=1]/li[pos()=7]/ul[pos()=1]/li[pos()=1]/div[pos()=0]/a[@innertext='QM Kategorien' and @href='javascript:void(0);']
+				</item>
+				<item
+				name="QMFehlercodesPreR"
+				id="ce71379e-f63a-43a4-9baa-9de7736a021e"
+				searchtimeout="5000ms"
+				capname="atag"
+				refpath="/dom[@domain='prerelease.bns.local']//div[#'panelbar-4']/div/ul/li[6]/ul/li[8]/ul/li[1]/div/a[@innertext='QM Fehlercodes']"
+				addcaps="unknown,webelement,atag"
+				refimgid="4f45c629-bd22-47ba-976e-ad15cd47962e">
+					/dom[@domain=$varUrl]//div[#'panelbar-4']/div[pos()=0]/ul[pos()=0]/li[pos()=5]/ul[pos()=1]/li[pos()=7]/ul[pos()=1]/li[pos()=0]/div[pos()=0]/a[@innertext='QM Fehlercodes' and @href='javascript:void(0);']
+				</item>
+				<item
+				name="ClaimArtInput"
+				id="4fb0cc1c-278c-4c48-80b7-92ad1506348c"
+				searchtimeout="5000ms"
+				capname="inputtag"
+				addcaps="unknown,webelement,inputtag"
+				refimgid="b0335b98-c07f-4236-998b-195c0d18c639">
+					/dom[@domain=$varUrl]//?/div[pos()=1]/table[pos()=0]/tbody[pos()=0]/tr[pos()=6]/td[pos()=0]/table[pos()=0]/tbody[pos()=0]/tr[pos()=0]/td[pos()=1]/div[pos()=0]/span[pos()=0]/span[pos()=0]/input[@name='ClaimArt_input' and @type='text']
+				</item>
+				<item
+				name="TreibstoffartenPreR"
+				id="507b639d-24b2-4c24-b61d-2ebc14ea475a"
+				searchtimeout="5000ms"
+				capname="atag"
+				refpath="/dom[@domain='prerelease.bns.local']//div[#'panelbar-4']/div/ul/li[6]/ul/li[10]/ul/li[2]/div/a[@innertext='Treibstoffarten']"
+				addcaps="unknown,webelement,atag"
+				refimgid="1af7dc48-1b7e-4a76-8f8e-351fcea66bd4">
+					/dom[@domain=$varUrl]//div[#'panelbar-4']/div[pos()=0]/ul[pos()=0]/li[pos()=5]/ul[pos()=1]/li[pos()=9]/ul[pos()=1]/li[pos()=1]/div[pos()=0]/a[@innertext='Treibstoffarten' and @href='javascript:void(0);']
+				</item>
+				<item
+				name="TankdatenwarencodesPreR"
+				id="510076b7-da9a-4d15-b59a-3119290253a4"
+				searchtimeout="5000ms"
+				capname="atag"
+				refpath="/dom[@domain='prerelease.bns.local']//div[#'panelbar-4']/div/ul/li[6]/ul/li[10]/ul/li[4]/div/a[@innertext='Tankdatenwarencodes']"
+				addcaps="unknown,webelement,atag"
+				refimgid="aa04bce9-2f26-4290-985f-1d00d3968d8e">
+					/dom[@domain=$varUrl]//div[#'panelbar-4']/div[pos()=0]/ul[pos()=0]/li[pos()=5]/ul[pos()=1]/li[pos()=9]/ul[pos()=1]/li[pos()=3]/div[pos()=0]/a[@innertext='Tankdatenwarencodes' and @href='javascript:void(0);']
+				</item>
+				<item
+				name="TankdatenerfassungPreR"
+				id="695c61d7-5e03-49d2-979a-3fc931046851"
+				searchtimeout="5000ms"
+				capname="atag"
+				refpath="/dom[@domain='prerelease.bns.local']//div[#'panelbar-4']/div/ul/li[6]/ul/li[10]/ul/li[1]/div/a[@innertext='Tankdatenerfassung']"
+				addcaps="unknown,webelement,atag"
+				refimgid="73c68ff7-49a1-454c-87d2-f2ac5ef70e1b">
+					/dom[@domain=$varUrl]//div[#'panelbar-4']/div[pos()=0]/ul[pos()=0]/li[pos()=5]/ul[pos()=1]/li[pos()=9]/ul[pos()=1]/li[pos()=0]/div[pos()=0]/a[@innertext='Tankdatenerfassung' and @href='javascript:void(0);']
+				</item>
+				<item
+				name="GeschaeftsbereichidInputPreR"
+				id="4890049b-cabd-4b67-a314-9e11bcf259b7"
+				searchtimeout="5000ms"
+				capname="inputtag"
+				addcaps="unknown,webelement,inputtag"
+				refimgid="682cfb89-f310-4e92-a02c-84aba50e9b2c">
+					/dom[@domain=$varUrl]//?/div[pos()=1]/table[pos()=0]/tbody[pos()=0]/tr[pos()=5]/td[pos()=0]/table[pos()=0]/tbody[pos()=0]/tr[pos()=0]/td[pos()=1]/div[pos()=0]/span[pos()=0]/span[pos()=0]/input[@name='Geschaeftsbereichid_input' and @type='text']
+				</item>
+				<item
+				name="NiederlassungInputPreR"
+				id="93436501-9705-49bb-bc18-ce733ebf0fe8"
+				searchtimeout="5000ms"
+				capname="inputtag"
+				addcaps="unknown,webelement,inputtag"
+				refimgid="6621a4b4-dd54-49e6-94ab-8a71112cd553">
+					/dom[@domain=$varUrl]//?/div[pos()=1]/table[pos()=0]/tbody[pos()=0]/tr[pos()=5]/td[pos()=0]/table[pos()=0]/tbody[pos()=0]/tr[pos()=0]/td[pos()=1]/div[pos()=0]/span[pos()=0]/span[pos()=0]/input[@name='Niederlassung_input' and @type='text']
+				</item>
+				<item
+				name="Frankfurt1"
+				id="f440471e-6418-43b0-a857-39980848eba5"
+				searchtimeout="5000ms"
 				capname="litag"
-				refpath="/dom[@domain='onweb.bns-software.com' and @caption='BNS WEBSUITE - Admin' and @page='' and @path='/' and @browsername='Chrome' and @pageurl='http://onweb.bns-software.com/#']//li[#'MainAreaTabStrip_ts_active']"
+				refpath="/dom[@domain='prerelease.bns.local' and @caption='BNS WEBSUITE - Admin' and @page='' and @path='/' and @browsername='IE']//body[#'main']/div[3]/div/div[2]/ul/li[@innertext='Frankfurt']"
 				addcaps="unknown,webelement,litag"
-				refimgid="294aeb47-a756-4113-b819-8ae50ca1420d">
-					/dom[@domain=$varUrl]//li[#'MainAreaTabStrip_ts_active']
+				refimgid="949acf27-a0b1-4828-82b2-6580c377295d">
+					/dom[@domain=$varUrl]//body[#'main']/div[pos()=4]/div[pos()=0]/div[pos()=1]/ul[pos()=0]/li[@innertext='Frankfurt']
 				</item>
 				<item
-				name="KONFIGURATION9"
-				id="6ba20a00-6663-4b53-9ba3-33eb6e22e349"
-				searchtimeout="30000ms"
-				capname="atag"
-				refpath="/dom[@domain='onweb.bns-software.com']//div[#'panelbar-5']/div/ul/li[6]/div/a[@innertext='KONFIGURATION']"
-				addcaps="unknown,webelement,atag"
-				refimgid="1969e14c-1e57-4927-ad2a-cf4d029740fb">
-					/dom[@domain=$varUrl]//div[#'panelbar-5']/?/?/ul//a[@innertext='KONFIGURATION']
-				</item>
-				<item
-				name="Webseiten"
-				id="c540f997-b229-4d7d-af1a-cd4bb9358a09"
-				searchtimeout="30000ms"
-				capname="atag"
-				refpath="/dom[@domain='onweb.bns-software.com']//div[#'panelbar-5']/div/ul/li[6]/ul/li[3]/div/a[@innertext='Webseiten']"
-				addcaps="unknown,webelement,atag"
-				refimgid="bcd57e6e-db17-4697-ace8-17069c67121d">
-					/dom[@domain=$varUrl]//div[#'panelbar-5']/?/?/ul/li[6]/ul//a[@innertext='Webseiten']
-				</item>
-				<item
-				name="Titel"
-				id="58c76dbb-a22c-49f5-a29e-59c3f7e05ad3"
-				searchtimeout="30000ms"
+				name="KmDavorPreR"
+				id="8334f2f9-50c8-4c3b-9c85-e09792878440"
+				searchtimeout="5000ms"
 				capname="inputtag"
-				refpath="/dom[@domain='onweb.bns-software.com']//input[#'Titel']"
 				addcaps="unknown,webelement,inputtag"
-				refimgid="c6cdd090-6983-4563-9d0e-52779b1771c9">
-					/dom[@domain=$varUrl]//input[#'Titel']
+				refimgid="94ef61d3-023b-45a1-ac1d-57757da58c65">
+					/dom[@domain=$varUrl]//?/div[pos()=1]/table[pos()=0]/tbody[pos()=0]/tr[pos()=6]/td[pos()=0]/table[pos()=0]/tbody[pos()=0]/tr[pos()=0]/td[pos()=1]/div[pos()=0]/span[pos()=0]/span[pos()=0]/input[@type='text']
 				</item>
 				<item
-				name="Standardnachrichten"
-				id="d9390021-c330-462b-b295-f098aa4c734d"
-				searchtimeout="30000ms"
-				capname="atag"
-				refpath="/dom[@domain='onweb.bns-software.com' and @caption='BNS WEBSUITE - Admin' and @page='' and @path='/' and @browsername='Chrome' and @pageurl='http://onweb.bns-software.com/#']//div[#'panelbar-5']/div/ul/li[6]/ul/li[4]/div/a[@innertext='Standardnachrichten']"
-				addcaps="unknown,webelement,atag"
-				refimgid="3fcd9ba1-190e-48d2-84d1-c2ad859a2498">
-					/dom[@domain=$varUrl]//div[#'panelbar-5']/?/?/ul/li[6]/ul//a[@innertext='Standardnachrichten']
-				</item>
-				<item
-				name="Kontakte1"
-				id="6f40f2f5-f768-4c31-8f26-8878785ed555"
-				searchtimeout="30000ms"
-				capname="atag"
-				refpath="/dom[@domain='onweb.bns-software.com' and @caption='BNS WEBSUITE - Admin' and @page='' and @path='/' and @browsername='Chrome' and @pageurl='http://onweb.bns-software.com/#']//div[#'panelbar-5']/div/ul/li[6]/ul/li[5]/div/a[@innertext='Kontakte']"
-				addcaps="unknown,webelement,atag"
-				refimgid="920c5f30-3e18-4e6d-8b86-9146f54957e5">
-					/dom[@domain=$varUrl]//div[#'panelbar-5']/?/?/ul/li[6]/ul//a[@innertext='Kontakte']
-				</item>
-				<item
-				name="Coordinate"
-				id="a3aeaf96-f601-4cea-8b64-1564675bb804"
-				searchtimeout="30000ms"
-				capname="inputtag"
-				refpath="/dom[@domain='onweb.bns-software.com' and @caption='BNS WEBSUITE - Admin' and @page='' and @path='/' and @browsername='Chrome' and @pageurl='http://onweb.bns-software.com/#']//input[#'Coordinate']"
-				addcaps="unknown,webelement,inputtag"
-				refimgid="5ea6cfb4-19dc-4328-867f-ba6896b08262">
-					/dom[@domain=$varUrl]//input[#'Coordinate']
-				</item>
-				<item
-				name="Geofences"
-				id="d6ebf4ff-0399-45ae-a61a-87fd6e647ceb"
-				searchtimeout="30000ms"
-				capname="atag"
-				refpath="/dom[@domain='onweb.bns-software.com']//div[#'panelbar-5']/div/ul/li[6]/ul/li[6]/div/a[@innertext='Geofences']"
-				addcaps="unknown,webelement,atag"
-				refimgid="1b6dc4d6-37a2-4dfb-ba51-32514fe20328">
-					/dom[@domain=$varUrl]//div[#'panelbar-5']/?/?/ul/li[6]/ul//a[@innertext='Geofences']
-				</item>
-				<item
-				name="FieldSetTag0c8f9c0110ee47ec922eB6135"
-				id="9c0095c4-d756-428b-9c00-61b45cf26357"
-				searchtimeout="30000ms"
-				capname="fieldsettag"
-				refpath="/dom[@domain='onweb.bns-software.com']//fieldset[#'0c8f9c01-10ee-47ec-922e-b61352076387']"
-				addcaps="unknown,webelement,fieldsettag"
-				refimgid="37939a74-bcaa-49dd-ad1d-d4caa6f8950e">
-					/dom[@domain=$varUrl]//fieldset[#'0c8f9c01-10ee-47ec-922e-b61352076387']
-				</item>
-				<item
-				name="KTabstripItemsKReset"
-				id="f87642fb-4ae8-43b1-b06e-28d160d4a2fd"
-				searchtimeout="30000ms"
-				capname="ultag"
-				refpath="/dom[@domain='onweb.bns-software.com']//div[#'MainAreaTabStrip']/span/span/ul"
-				addcaps="unknown,webelement,ultag"
-				refimgid="ccc6323b-9632-41fa-b9b4-1d9e72873da7">
-					/dom[@domain=$varUrl]//div[#'MainAreaTabStrip']//ul
-				</item>
-				<item
-				name="Navigationssysteme"
-				id="1aa6b6d7-c493-45d0-b037-9dd01f33607e"
-				searchtimeout="30000ms"
-				capname="atag"
-				refpath="/dom[@domain='onweb.bns-software.com']//div[#'panelbar-5']/div/ul/li[6]/ul/li[9]/div/a[@innertext='Navigationssysteme']"
-				addcaps="unknown,webelement,atag"
-				refimgid="d11b5ca3-6d50-48ea-adee-228ebf5c3daa">
-					/dom[@domain=$varUrl]//div[#'panelbar-5']/?/?/ul/li[6]/ul//a[@innertext='Navigationssysteme']
-				</item>
-				<item
-				name="Description1"
-				id="1ba1c705-8cd0-46c5-acf2-e94702cc0bd7"
-				searchtimeout="30000ms"
-				capname="textareatag"
-				addcaps="unknown,webelement,textareatag"
-				refimgid="2958c600-b314-4477-a994-6722d5da0c48">
-					/dom[@domain=$varUrl]//div/table/tbody/tr[4]/td/table/tbody/tr/td[2]/textarea[#'Description']
-				</item>
-				<item
-				name="TabiconIcomoonIcomoonTable1"
-				id="f6c2a590-9eb5-4128-bec3-fb004e755c3f"
-				searchtimeout="30000ms"
+				name="KSelect"
+				id="4cd9ce84-73be-4348-816c-051a961dd35e"
+				searchtimeout="5000ms"
 				capname="spantag"
-				refpath="/dom[@domain='onweb.bns-software.com']//div[#'MainAreaTabStrip']/span/span/ul/li[1]/span[2]/span[2]"
 				addcaps="unknown,webelement,spantag"
-				refimgid="873126fd-08a9-48fa-bf6b-c749c7e34210">
-					/dom[@domain=$varUrl]//div[#'MainAreaTabStrip']/span/?/?/ul/li[1]/span[2]/span[2]
+				refimgid="fe70adcd-b141-46ea-8b9e-f53e8982dda5">
+					/dom[@domain=$varUrl]//?/div[pos()=1]/table[pos()=0]/tbody[pos()=0]/tr[pos()=1]/td[pos()=0]/table[pos()=0]/tbody[pos()=0]/tr[pos()=0]/td[pos()=1]/div[pos()=0]/span[pos()=0]/span[pos()=0]/span[pos()=1]
 				</item>
 				<item
-				name="DivTag3e19c4b0057d4129A51dD69243a735"
-				id="8fe259a6-ff2d-4b6a-80b2-7a243251671d"
-				searchtimeout="30000ms"
-				capname="divtag"
-				refpath="/dom[@domain='onweb.bns-software.com']//div[#'3e19c4b0-057d-4129-a51d-d69243a735ac-1']"
-				addcaps="unknown,webelement,divtag"
-				refimgid="57275e3e-7280-4d77-aa09-bac21503fde9">
-					/dom[@domain=$varUrl]//div[#'3e19c4b0-057d-4129-a51d-d69243a735ac-1']
+				name="Tesd1"
+				id="cb6e5f03-8f49-4345-a47a-1f5796edc333"
+				searchtimeout="5000ms"
+				capname="tdtag"
+				addcaps="unknown,webelement,tdtag"
+				refimgid="ed7fc302-3766-4d3b-99bd-19a90a08da7f">
+					/dom[@domain=$varUrl]//body[#'main']/div[pos()=14]/div[pos()=1]/div[pos()=0]/div[pos()=1]/div[pos()=0]/div[pos()=4]/div[pos()=0]/table[pos()=0]/tbody[pos()=1]/tr[pos()=0]/td[1]
+				</item>
+				<item
+				name="OptionTag11HLGHub"
+				id="64c54c95-3738-404d-be44-229e19cf33d3"
+				searchtimeout="5000ms"
+				capname="optiontag"
+				refpath="/dom[@domain='prerelease.bns.local']//select[#'Categories']/option[@value='11HLG-Hub']"
+				addcaps="unknown,webelement,optiontag"
+				refimgid="aeb8f199-10b1-4365-8e52-8efa0d066db5">
+					/dom[@domain=$varUrl]//select[#'Categories']/option[@value='11HLG-Hub' and @innertext='HLG-Hub']
+				</item>
+				<item
+				name="OptionTag28Depot"
+				id="866dd001-c96b-450b-b572-b471f2c257ac"
+				searchtimeout="5000ms"
+				capname="optiontag"
+				refpath="/dom[@domain='prerelease.bns.local']//select[#'Categories']/option[@value='28Depot']"
+				addcaps="unknown,webelement,optiontag"
+				refimgid="5fe2b9d8-92ba-40d4-8fb9-fa784e159733">
+					/dom[@domain=$varUrl]//select[#'Categories']/option[@value='28Depot' and @innertext='Depot']
+				</item>
+				<item
+				name="OptionTag2AKundePreR"
+				id="9b49e3af-7c98-430f-9106-8b44e072ecaa"
+				searchtimeout="5000ms"
+				capname="optiontag"
+				refpath="/dom[@domain='prerelease.bns.local']//select[#'Categories']/option[@value='2A Kunde']"
+				addcaps="unknown,webelement,optiontag"
+				refimgid="2543bb2b-72b4-48cf-995a-421069861a50">
+					/dom[@domain=$varUrl]//select[#'Categories']/option[@value='2A Kunde' and @innertext='A Kunde']
+				</item>
+				<item
+				name="Quicksearch"
+				id="9f2f2100-ea73-476c-b417-b2b22d5aa9bf"
+				searchtimeout="5000ms"
+				capname="inputtag"
+				addcaps="unknown,webelement,inputtag"
+				refimgid="3075762d-c139-47a0-852b-b36aeda9d889">
+					/dom[@domain=$varUrl]//body[#'main']/div[pos()=15]/div[pos()=1]/div[pos()=0]/div[pos()=0]/div[pos()=0]/span[pos()=0]/div[pos()=0]/div[pos()=0]/input[@id='quicksearch' and @name='quicksearch' and @type='text']
+				</item>
+				<item
+				name="Driesch"
+				id="72ec6b54-4e22-4136-a942-bdfa3f572be4"
+				searchtimeout="5000ms"
+				capname="tdtag"
+				addcaps="unknown,webelement,tdtag"
+				refimgid="3614aa46-abcf-4a7a-a994-642df098946b">
+					/dom[@domain=$varUrl]//body[#'main']/div[pos()=15]/div[pos()=1]/div[pos()=0]/div[pos()=1]/div[pos()=0]/div[pos()=4]/div[pos()=0]/table[pos()=0]/tbody[pos()=1]/tr[pos()=0]/td[@innertext='Driesch']
+				</item>
+				<item
+				name="GesamtWertPreR"
+				id="8893de55-0f61-4d0d-b655-c60f571b1ea1"
+				searchtimeout="5000ms"
+				capname="inputtag"
+				addcaps="unknown,webelement,inputtag"
+				refimgid="1bd21a77-9e37-4147-adc4-ecac2896dd36">
+					/dom[@domain=$varUrl]//?/div[pos()=1]/table[pos()=0]/tbody[pos()=0]/tr[pos()=3]/td[pos()=0]/table[pos()=0]/tbody[pos()=0]/tr[pos()=0]/td[pos()=1]/div[pos()=0]/span[pos()=0]/span[pos()=0]/input[@type='text' and @value='0,00']
 				</item>
 				<basepath>
 					/dom[@domain=$varUrl]
@@ -5563,15 +5500,6 @@ rxversion="5.4.6.0">
 					/dom[@domain=$varUrl]
 				</basepath>
 			</folder>
-			<item
-			name="UEBERNEHMENQS"
-			id="6f0dbd7e-e0a8-4570-8e27-9f038a06957a"
-			searchtimeout="30000ms"
-			capname="buttontag"
-			addcaps="unknown,webelement,buttontag"
-			refimgid="37c17405-033f-4131-aafd-89a77eb2a5de">
-				/dom[@domain=$varUrl]//body[#'main']/div[13]/div[2]//button[@innertext='&#220;BERNEHMEN']
-			</item>
 			<basepath>
 				/dom[@domain=$varUrl]
 			</basepath>
@@ -5783,7 +5711,7 @@ AAAASUVORK5CYII=
 		searchtimeout="5000ms"
 		capname="unknown"
 		addcaps="form,nativewindow"
-		refimgid="e9f55f8a-dfa9-42a1-8a94-22e9346b9897"
+		refimgid="b1787a77-69f2-4157-85ff-8919b6f546cf"
 		isrooted="True"
 		usecache="True">
 			<item
@@ -5922,71 +5850,53 @@ AAAASUVORK5CYII=
 				///a[@innertext='ONCRM']
 			</item>
 			<item
-			name="BNSOnlineHilfe"
-			id="26d524eb-3e3c-41d7-aa8f-bb950e363061"
+			name="PortalLoginBNSImage"
+			id="cb1acf74-7362-422f-9244-4b35cbaddcc4"
 			searchtimeout="5000ms"
-			capname="h1tag"
-			refpath="/dom[@domain='onlinehelp.bns-software.com']//section[#'page-title']/div/div/div[1]/h1[@innertext='BNS Online Hilfe ']"
-			addcaps="unknown,webelement,h1tag"
-			refimgid="ad9b8e4a-7406-40b6-ad89-b2616fa0661b">
-				///section[#'page-title']/div[pos()=0]/div[pos()=0]/div[pos()=0]/h1[@innertext='BNS Online Hilfe ']
+			capname="atag"
+			refpath="/dom[@domain='onweb.bns-software.com']//a[#'PortalLoginBNSImage']"
+			addcaps="unknown,webelement,atag"
+			refimgid="e4404324-4b39-480e-aaf3-b0bad09c186c">
+				///a[#'PortalLoginBNSImage']
 			</item>
 			<item
-			name="NeverRememberPasswordForThisSite"
-			id="8372d649-b5dc-40ee-9e92-f81f7a2ebfc6"
-			searchtimeout="5000ms"
-			capname="menuitem"
-			addcaps="menuitem,accessible"
-			refimgid="4abe8dd3-27a8-4d6e-91a9-20147e09845b">
-				//contextmenu[@accessiblename='Remember' and @accessiblerole='MenuPopup']/menuitem[@accessiblename~'^Never\ Remember\ Password\ f' and @accessiblekeyboardshortcut='e' and @accessiblerole='MenuItem']
-			</item>
-			<item
-			name="ClientCaption"
-			id="d682abff-16f1-4f39-92c6-7da6264a9f4f"
-			searchtimeout="5000ms"
-			capname="unknown"
-			addcaps="unknown,nativewindow"
-			refimgid="229a5b99-f5ad-43b6-a6a8-3239a222b2ce">
-				//element[@class='Client Caption' and @instance='0']
-			</item>
-			<item
-			name="BNSRanorexStudio"
-			id="091a1ac8-29af-42d4-898c-c9a5bb3f03f8"
+			name="PreReleaseRanorexStudio"
+			id="c1293a2b-e1fe-4306-8608-b1bb00e119cb"
 			searchtimeout="5000ms"
 			capname="button"
-			refpath="/menubar[@processname='explorer']/container[@controlid='40965']/container[@caption='Running applications']/element[@class='MSTaskListWClass']/toolbar[@accessiblename='Running applications']/button[@accessiblename='BNS - Ranorex Studio']"
+			refpath="/menubar[@processname='explorer']/container[@controlid='40965']/container[@caption='Running applications']/element[@class='MSTaskListWClass']/toolbar[@accessiblename='Running applications']/button[@accessiblename='Pre_release - Ranorex Studio']"
 			addcaps="button,accessible"
-			refimgid="54541bd2-b3a6-465b-af4c-ccc2ef683509">
-				//container[@controlid='40965' and @class='ReBarWindow32' and @instance='0']/container[@caption='Running applications' and @class='MSTaskSwWClass' and @instance='0']/element[@class='MSTaskListWClass' and @instance='0']/toolbar[@accessiblename='Running applications' and @accessiblerole='ToolBar']/button[@accessiblename='BNS - Ranorex Studio' and @accessiblerole='PushButton' and @text='BNS - Ranorex Studio']
+			refimgid="136a619d-e151-42f4-aa8c-e1c266eae98e">
+				//container[@controlid='40965' and @class='ReBarWindow32' and @instance='0']/container[@caption='Running applications' and @class='MSTaskSwWClass' and @instance='0']/element[@class='MSTaskListWClass' and @instance='0']/toolbar[@accessiblename='Running applications' and @accessiblerole='ToolBar']/button[@accessiblename~'^Pre_release\ -\ Ranorex\ Stu' and @accessiblerole='PushButton' and @text~'^Pre_release\ -\ Ranorex\ Stu']
 			</item>
 			<item
-			name="CloseAllTabs"
-			id="04072ce5-4612-4d0e-bdef-a679c4adc020"
+			name="LagerverwaltungPreR"
+			id="a0c45066-c5a1-4d12-8310-e993d144e62b"
 			searchtimeout="5000ms"
-			capname="button"
-			addcaps="button,nativewindow"
-			refimgid="46f3c9da-c0f3-4a22-acba-3147bfdb59d1">
-				//button[@text='Close all &amp;tabs' and @class='Button']
+			capname="atag"
+			refpath="/dom[@domain='onweb.bns-software.com']//div[#'panelbar-4']/div/ul/li[6]/ul/li[6]/ul/li[2]/div/a[@innertext='Lagerverwaltung']"
+			addcaps="unknown,webelement,atag"
+			refimgid="208ef158-676f-4db8-8df3-32fb1162b897">
+				///div[#'panelbar-4']/div[pos()=0]/ul[pos()=0]/li[pos()=5]/ul[pos()=1]/li[pos()=5]/ul[pos()=1]/li[pos()=1]/div[pos()=0]/a[@innertext='Lagerverwaltung' and @href='javascript:void(0);']
 			</item>
 			<item
-			name="BNSWEBSUITEAdminGoogleChrome"
-			id="4175196c-92a8-42dc-b525-2217a6224209"
-			searchtimeout="30000ms"
-			capname="titlebar"
-			refpath="/form[@title~'^BNS\ WEBSUITE\ -\ Admin\ -\ Go']/titlebar[@accessiblerole='TitleBar']"
-			addcaps="titlebar,accessible"
-			refimgid="5a8e5a29-53be-4d28-8a36-c5a4c3810ea1">
-				//titlebar[@accessiblerole='TitleBar']
+			name="Mautlaender"
+			id="744cdb12-651f-442f-b0b3-5262c0d0ce11"
+			searchtimeout="5000ms"
+			capname="atag"
+			refpath="/dom[@domain='onweb.bns-software.com']//div[#'panelbar-4']/div/ul/li[6]/ul/li[7]/ul/li[2]/div/a[@innertext='Mautländer']"
+			addcaps="unknown,webelement,atag"
+			refimgid="c9bb50ad-7eb0-4620-ae7e-646bc56f16d8">
+				///div[#'panelbar-4']/div[pos()=0]/ul[pos()=0]/li[pos()=5]/ul[pos()=1]/li[pos()=6]/ul[pos()=1]/li[pos()=1]/div[pos()=0]/a[@innertext='Mautl&#228;nder' and @href='javascript:void(0);']
 			</item>
 			<item
-			name="Muenchen"
-			id="3e0996b0-6d8a-4660-a8c7-e76aebf5c77d"
-			searchtimeout="30000ms"
-			capname="tdtag"
-			refpath="/dom[@domain='srv-sh-01']//body[#'main']/div[13]/div[2]/div/div[2]/div[1]/div[4]/div[1]/table/tbody/tr[2]/td[@innertext='München']"
-			addcaps="unknown,webelement,tdtag"
-			refimgid="90d4dbf1-cb9e-453a-8f57-acc484585afa">
-				///body[#'main']/div[13]/div[2]/div/div[2]/div[1]/div[4]/?/?/table/tbody/tr[2]/td[@innertext='M&#252;nchen']
+			name="TtItemLeftAuiItem"
+			id="b481808e-1d7c-4a5c-a83c-f61611f16eff"
+			searchtimeout="5000ms"
+			capname="divtag"
+			addcaps="unknown,webelement,divtag"
+			refimgid="e603bce8-c8f7-41d8-bc2c-993ee1e2cfe2">
+				///header[#'stalker']/div[pos()=0]/div[pos()=1]/div[pos()=0]/div[pos()=0]/div[pos()=1]/div[pos()=0]
 			</item>
 			<basepath>
 				//
@@ -6013,7 +5923,8 @@ AAAASUVORK5CYII=
 	<variables>
 		<var
 		name="varUrl"
-		id="97b20f6b-ba66-439b-846f-f9ff2de484da">
+		id="f98bc50d-63da-4c63-90ee-998b0eaba70f">
+			prerelease.bns.local
 		</var>
 	</variables>
 </repository>
